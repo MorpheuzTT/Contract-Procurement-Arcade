@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
   <title>SE C&P Arcade - Final Master Build v14.0</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Inter:wght@400;600&display=swap"
     rel="stylesheet" />
   <style>
     /* ==========================================================================
@@ -57,7 +57,7 @@
       align-items: center;
       min-height: 100vh;
       height: 100vh;
-      padding: 8px 16px 8px;
+      padding: 8px 12px 8px;
       overflow-y: auto;
       overflow-x: hidden;
     }
@@ -70,7 +70,7 @@
       align-items: center;
       margin-bottom: 4px;
       z-index: 10;
-      gap: 8px;
+      gap: 6px;
       flex-wrap: wrap;
       flex-shrink: 0;
     }
@@ -79,13 +79,14 @@
       background: var(--panel);
       border: 1px solid var(--border);
       color: #546e8a;
-      padding: 8px 14px;
+      padding: 5px 10px;
       border-radius: 20px;
       cursor: pointer;
       font-family: 'Orbitron', sans-serif;
-      font-size: 12px;
-      letter-spacing: 2px;
+      font-size: 10px;
+      letter-spacing: 1px;
       transition: .2s;
+      white-space: nowrap;
     }
 
     #mute-btn:hover {
@@ -100,6 +101,7 @@
       font-size: clamp(18px, 3vw, 30px);
       background: linear-gradient(90deg, var(--cyan), var(--gold), var(--cyan));
       background-size: 200%;
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       animation: shimmer 3s linear infinite;
@@ -378,17 +380,18 @@
     }
 
     #lb-nav-btn {
-      padding: 7px 16px;
+      padding: 5px 12px;
       background: transparent;
       border: 2px solid var(--gold);
       border-radius: 8px;
       font-family: 'Orbitron', sans-serif;
       font-weight: 900;
-      font-size: 11px;
-      letter-spacing: 2px;
+      font-size: 10px;
+      letter-spacing: 1px;
       color: var(--gold);
       cursor: pointer;
       transition: .2s;
+      white-space: nowrap;
     }
 
     #lb-nav-btn:hover {
@@ -396,17 +399,18 @@
     }
 
     #lv-nav-btn {
-      padding: 7px 16px;
+      padding: 5px 12px;
       background: transparent;
       border: 2px solid var(--cyan);
       border-radius: 8px;
       font-family: 'Orbitron', sans-serif;
       font-weight: 900;
-      font-size: 11px;
-      letter-spacing: 2px;
+      font-size: 10px;
+      letter-spacing: 1px;
       color: var(--cyan);
       cursor: pointer;
       transition: .2s;
+      white-space: nowrap;
     }
 
     #lv-nav-btn:hover {
@@ -500,9 +504,10 @@
     }
 
     .lv-card .lv-body {
-      font-size: 14px;
+      font-size: 13px;
+      font-family: 'Inter', sans-serif;
       color: #8a9ab8;
-      line-height: 1.7;
+      line-height: 1.65;
     }
 
     #lbscr {
@@ -786,27 +791,29 @@
       align-items: center;
       margin-bottom: 6px;
       padding: 0 10px;
+      gap: 8px;
     }
 
     #back-btn {
-      background: var(--panel);
-      border: 1px solid #1a3a5c;
-      color: #546e8a;
-      padding: 6px 14px;
-      border-radius: 6px;
+      background: rgba(15, 20, 35, 0.6);
+      border: 1px solid #2a3548;
+      color: #6a7a8a;
+      padding: 4px 10px;
+      border-radius: 5px;
       cursor: pointer;
-      font-size: 11px;
+      font-size: 9px;
       font-family: 'Orbitron', sans-serif;
       font-weight: 700;
       letter-spacing: 1px;
       transition: .2s;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+      flex-shrink: 0;
+      white-space: nowrap;
     }
 
     #back-btn:hover {
-      border-color: var(--cyan);
-      color: var(--cyan);
-      background: rgba(0, 245, 255, 0.05);
+      border-color: #3a5a7a;
+      color: #8a9ab0;
+      background: rgba(15, 20, 35, 0.8);
     }
 
     #game-container {
@@ -825,7 +832,8 @@
       width: 100%;
       max-width: none;
       max-height: none;
-      object-fit: contain;
+      object-fit: fill;
+      padding: 6px;
       border-radius: 12px;
       border: 2px solid #1a2d4a;
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
@@ -876,9 +884,10 @@
     #lvlbar {
       display: flex;
       align-items: center;
-      gap: 10px;
-      width: 100%;
-      margin-left: 20px;
+      gap: 8px;
+      flex: 1;
+      min-width: 0;
+      margin-left: 0;
     }
 
     #lvlbar .lnum {
@@ -991,17 +1000,19 @@
     }
 
     .ltitle {
-      font-size: 18px;
-      font-weight: 700;
+      font-size: 16px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
       color: #e0e8f0;
       margin-bottom: 5px;
       line-height: 1.5;
     }
 
     .lbody {
-      font-size: 16px;
+      font-size: 15px;
+      font-family: 'Inter', sans-serif;
       color: #9ab8d0;
-      line-height: 1.9;
+      line-height: 1.75;
     }
 
     #lvc {
@@ -1107,7 +1118,8 @@
       max-width: 700px;
       width: 90%;
       font-size: 14px;
-      line-height: 2.2;
+      font-family: 'Inter', sans-serif;
+      line-height: 2.0;
     }
 
     .pov-tbl h3 {
@@ -1524,28 +1536,62 @@
     let currentRAF = null, gameKH = null, paused = false, pauseResumeFn = () => { };
     let currentGame = 0, currentLevel = 1;
 
-    function setPause(fn, html) { pauseResumeFn = fn; $$('pov-tbl').innerHTML = html; }
-    function togglePause() { paused = !paused; $$('pov').style.display = paused ? 'flex' : 'none'; if (!paused) pauseResumeFn(); }
+    //Each game registers its own resume function before the loop starts
+    function setPause(fn, html) {
+      pauseResumeFn = fn;             // Store this game's resume callback
+      $$('pov-tbl').innerHTML = html; //show game-specific info in the pause panel
+    }
+    //Toggle between PAUSED and RUNNING
+    function togglePause() {
+      paused = !paused; // flip: false -> true or true -> false
+      $$('pov').style.display = paused ? 'flex' : 'none'; //show or hide display 
+      if (!paused) pauseResumeFn(); // RESUME: restart the game loop
+    }
+    // Keyboard shortcut - alwasy active while a game is running
+    window.addEventListener('keydown', e => {
+      if (e.key === 'p' || e.key === 'P' || e.key === 'Escape') {
+        e.preventDefault(); //Prevent escape from closing dialogs
+        if (currentRAF || paused) togglePause();
+      }
+    });
 
-    window.addEventListener('keydown', e => { if (e.key === 'p' || e.key === 'P' || e.key === 'Escape') { e.preventDefault(); if (currentRAF || paused) togglePause(); } });
-
-    const PK = 'se_cp_players_v2', SK = 'se_cp_scores_v2';
+    const PK = 'se_cp_players_v2', // localstorage key - stores player names
+      SK = 'se_cp_scores_v2'; // localstorage key - stores scores records
     const GNAMES = { 0: 'Contract Catcher', 1: 'Proc. Blaster', 2: 'VO Escalator', 3: 'Authority Rush' };
     const GCOLS = { 0: '#00e5ff', 1: '#ff6d00', 2: '#d500f9', 3: '#00e676' };
-    let activePlayer = '';
+    let activePlayer = ''; // Currently selected player's name
 
+    // LOAD - Read the players array from browser storage
     function loadPlayers() { try { return JSON.parse(localStorage.getItem(PK) || '[]'); } catch { return []; } }
+    // SAVE - Save the players array to browser storage
     function savePlayers(a) { localStorage.setItem(PK, JSON.stringify(a)); }
+    // LOAD - Read the scores array from browser storage
     function loadScores() { try { return JSON.parse(localStorage.getItem(SK) || '[]'); } catch { return []; } }
 
     function saveScore(name, score, game, level) {
-      if (!name) return; const arr = loadScores();
-      arr.push({ name, score, game, gameName: GNAMES[game] || '', level, id: Date.now(), ds: new Date().toLocaleDateString('en-MY', { day: '2-digit', month: 'short', year: '2-digit' }) });
-      localStorage.setItem(SK, JSON.stringify(arr));
+      if (!name) return; //GUARD: Skip if no player selected
+      const arr = loadScores();// 1. Read all existing scores
+      arr.push({ // 2. Append the new score entry
+        name, // Player name string 
+        score, // Finalscore number
+        game, // Game index : 0, 1, 2, or 3
+        gameName: GNAMES[game] || '', // human readable game name
+        level, //Level reached
+        id: Date.now(), // Unique ID from timestamp 
+        ds: new Date().toLocaleDateString('en-MY', {
+          day: '2-digit',
+          month: 'short',
+          year: '2-digit'
+        })
+      }); // Date String in dd mon yy format (e.g. "01 Apr 25")
+      localStorage.setItem(SK, JSON.stringify(arr)); // Save updated scores array back to storage
     }
 
+    // RENDER - Display Player name in the launcher screen
     function renderPlayers() {
-      const players = loadPlayers(), list = $$('player-list'); list.innerHTML = '';
+      const players = loadPlayers(), // Creates a clickable chips button for each saved player
+        list = $$('player-list'); // Gets the list container element
+      list.innerHTML = ''; // Clears the list container element
       if (!players.length) { list.innerHTML = '<div style="color:#3a5a7a;font-size:16px;padding:4px 0">No players yet. Add one below!</div>'; return; }
       players.forEach(p => {
         const div = document.createElement('div'); div.className = 'pchip' + (p === activePlayer ? ' active' : ''); div.dataset.name = p;
@@ -1576,19 +1622,26 @@
     }
 
     let lbTab = 'all';
+    let lastRunMistakes = []; // Populated by game1 before calling showGO
     function showLB() { stopGame();['gov', 'launcher', 'game-view', 'lvc'].forEach(id => $$(id).style.display = 'none'); $$('lbscr').style.display = 'flex'; renderLB(lbTab); }
-    function switchTab(t, el) { lbTab = t; document.querySelectorAll('.lb-tab').forEach(x => x.classList.remove('active')); el.classList.add('active'); renderLB(t); }
+    function switchTab(t, el) {
+      lbTab = t; // Switch leader board tab (all, gov, or by game id)
+      document.querySelectorAll('.lb-tab').forEach(x => x.classList.remove('active')); // Remove active class from all tabs
+      el.classList.add('active'); // Add active class to clicked tab
+      renderLB(t); // Render leaderboard for selected tab
+    }
 
     function renderLB(tab) {
-      const all = loadScores(); let rows = tab === 'all' ? all : all.filter(e => String(e.game) === tab);
-      const sorted = rows.sort((a, b) => b.score - a.score);
-      const tbody = $$('lb-body');
+      const all = loadScores(); let rows = tab === 'all' ? all :
+        all.filter(e => String(e.game) === tab); // Filter by game index
+      const sorted = rows.sort((a, b) => b.score - a.score); //Sort highest score first
+      const tbody = $$('lb-body'); //HTML table body - writes rows here
 
       if (!sorted.length) { tbody.innerHTML = '<tr><td colspan="6" class="lb-empty">🎮 No scores yet — play a game!</td></tr>'; return; }
 
       tbody.innerHTML = sorted.slice(0, 50).map((e, i) => {
         const r = i + 1, rc = r === 1 ? 'r1' : r === 2 ? 'r2' : r === 3 ? 'r3' : 'rn', ri = r === 1 ? '🥇' : r === 2 ? '🥈' : r === 3 ? '🥉' : '#' + r;
-        const col = GCOLS[e.game] || '#546e8a', isMe = e.name === activePlayer;
+        const col = GCOLS[e.game] || '#546e8a', isMe = e.name === activePlayer; // Highlight your score row
         return '<tr style="' + (isMe ? 'background:#ffd60008' : '') + '"><td class="' + rc + '" style="font-size:17px;width:36px;text-align:center;padding:10px 8px">' + ri + '</td><td style="color:' + (isMe ? 'var(--gold)' : '#e0e8f0') + ';font-weight:' + (isMe ? 700 : 400) + ';font-size:15px">' + e.name + (isMe ? ' <span style="font-size:12px;color:var(--gold)"> YOU</span>' : '') + '</td><td><span class="lb-gtag" style="background:' + col + '22;color:' + col + ';border:1px solid ' + col + '55;font-size:13px;padding:4px 12px">' + (e.gameName === 'VO Router' ? 'VO Escalator' : e.gameName) + '</span></td><td style="color:#7a9ab8;font-size:14px">L' + (e.level || 1) + '</td><td style="font-family:Orbitron,monospace;color:var(--gold);font-weight:900;text-align:right;font-size:18px">' + e.score.toLocaleString() + '</td><td style="color:#546e8a;font-size:13px;text-align:right">' + (e.ds || '') + '</td></tr>';
       }).join('');
     }
@@ -1614,18 +1667,52 @@
       $$('lvc').style.display = 'flex'; $$('lvc-nb').onclick = function () { $$('lvc').style.display = 'none'; if (typeof nextFn === 'function') nextFn(); };
     }
     function showGO(score, restartFn, col, level, retryFn) {
+      // STEP 1 - Save the score to localStorage
       if (activePlayer) saveScore(activePlayer, score, currentGame, level);
-      $$('ov-title').style.color = col; $$('ov-score').textContent = score.toLocaleString(); $$('ov-lvl').textContent = 'REACHED LEVEL ' + level;
-      const c = col; $$('ov-again').style.borderColor = c; $$('ov-again').style.color = c;
-      $$('ov-again').onmouseover = function () { this.style.background = c + '30'; }; $$('ov-again').onmouseout = function () { this.style.background = 'transparent'; }; $$('ov-again').onclick = restartFn;
-      const rb = $$('ov-retry'); rb.style.borderColor = c; rb.style.color = c;
-      rb.onmouseover = function () { this.style.background = c + '30'; }; rb.onmouseout = function () { this.style.background = 'transparent'; }; rb.onclick = retryFn; rb.textContent = 'RETRY LEVEL ' + level;
-      const ls = pickLessons(3, currentGame);
-      $$('lesson-panel').innerHTML = ls.map(l => '<div class="lcard" style="border-color:' + l.col + '40;max-width:520px;width:90%"><div class="ltag" style="color:' + l.col + '">' + l.tag + '</div><div class="ltitle">' + l.title + '</div><div class="lbody">' + l.body + '</div></div>').join('');
-
+      // STEP 2 - Update overlay display
+      $$('ov-title').style.color = col;
+      $$('ov-score').textContent = score.toLocaleString();
+      $$('ov-lvl').textContent = 'REACHED LEVEL ' + level;
+      // STEP 3 - Wire the action buttons
+      const c = col;
+      $$('ov-again').style.borderColor = c;
+      $$('ov-again').style.color = c;
+      $$('ov-again').onmouseover = function () { this.style.background = c + '30'; };
+      $$('ov-again').onmouseout = function () { this.style.background = 'transparent'; };
+      $$('ov-again').onclick = restartFn;
+      const rb = $$('ov-retry');
+      rb.style.borderColor = c; rb.style.color = c;
+      rb.onmouseover = function () { this.style.background = c + '30'; };
+      rb.onmouseout = function () { this.style.background = 'transparent'; };
+      rb.onclick = retryFn;
+      rb.textContent = 'RETRY LEVEL ' + level;
+      // STEP 4 - Show mistakes review (game1) or random lessons (other games)
+      const panel = $$('lesson-panel');
+      if (currentGame === 0 && lastRunMistakes.length > 0) {
+        // Show targeted mistake correction cards
+        const uniqueMistakes = lastRunMistakes.filter((m, i, arr) => i === arr.findIndex(x => x.label === m.label && x.chosen === m.chosen));
+        panel.innerHTML =
+          '<div style="font-family:\'Inter\',sans-serif;color:#ffd600;font-size:13px;letter-spacing:2px;margin-bottom:8px;font-weight:600">📋 CORRECTIONS FROM THIS RUN:</div>' +
+          uniqueMistakes.slice(0, 4).map(m =>
+            '<div class="lcard" style="border-color:#ff3d7135;max-width:520px;width:90%;padding:12px 16px">' +
+            '<div style="font-size:11px;color:#ff3d71;letter-spacing:2px;font-family:\'Orbitron\',sans-serif;margin-bottom:4px">CORRECTION</div>' +
+            '<div style="font-family:\'Inter\',sans-serif;font-size:14px;font-weight:600;color:#e0e8f0;margin-bottom:3px">' + m.label + (m.desc ? ' — ' + m.desc : '') + '</div>' +
+            '<div style="font-family:\'Inter\',sans-serif;font-size:13px;color:#ff8080">You chose: <b>' + m.chosen + '</b></div>' +
+            '<div style="font-family:\'Inter\',sans-serif;font-size:13px;color:#00e676">✓ Correct: <b>' + m.correct + '</b></div>' +
+            '</div>'
+          ).join('');
+        if (uniqueMistakes.length === 0) panel.innerHTML = '<div style="color:#00e676;font-family:\'Inter\',sans-serif;font-size:15px;padding:12px">🎯 PERFECT RUN — No corrections needed!</div>';
+      } else {
+        // Fallback: show 3 random policy lessons
+        const ls = pickLessons(3, currentGame);
+        panel.innerHTML = ls.map(l => '<div class="lcard" style="border-color:' + l.col + '40;max-width:520px;width:90%"><div class="ltag" style="color:' + l.col + '">' + l.tag + '</div><div class="ltitle">' + l.title + '</div><div class="lbody">' + l.body + '</div></div>').join('');
+      }
       const scores = loadScores();
       const currentRunTs = scores.length ? scores[scores.length - 1].id : 0;
-      renderOVLB(score, currentGame, currentRunTs); $$('gov').style.display = 'flex';
+      // STEP 5 - Show leaderboard preview with this run highlighted
+      renderOVLB(score, currentGame, currentRunTs);
+      // STEP 6 - Show the overlay
+      $$('gov').style.display = 'flex';
     }
 
     function renderOVLB(myScore, gn, currentRunTs) {
@@ -1792,25 +1879,34 @@
       ];
 
       const LVLS = [
-        { ma: 2, vy: 1.1, goal: 6, lives: 3, spI: 95, name: 'BASIC' },
-        { ma: 3, vy: 1.2, goal: 8, lives: 4, spI: 80, name: 'STANDARD' },
-        { ma: 4, vy: 1.4, goal: 9, lives: 4, spI: 60, name: 'ADVANCED' },
-        { ma: 5, vy: 1.5, goal: 10, lives: 6, spI: 55, name: 'EXPERT' },
-        { ma: 5, vy: 1.6, goal: Infinity, lives: 7, spI: 45, name: 'ENDLESS' },
+        // vy = fall speed (px/frame @60fps), spI = spawn interval (frames @60fps)
+        // Slowed significantly to prioritise reading & learning over reaction speed
+        { ma: 2, vy: 0.40, goal: 6, lives: 3, spI: 220, name: 'BASIC' },
+        { ma: 3, vy: 0.50, goal: 8, lives: 4, spI: 180, name: 'STANDARD' },
+        { ma: 4, vy: 0.60, goal: 9, lives: 4, spI: 150, name: 'ADVANCED' },
+        { ma: 5, vy: 0.70, goal: 10, lives: 6, spI: 130, name: 'EXPERT' },
+        { ma: 5, vy: 0.80, goal: Infinity, lives: 7, spI: 110, name: 'ENDLESS' },
       ];
 
-      const PTBL = '<h3>INDIVIDUAL LOA — QUOTATION & TENDER</h3>' +
-        '<div style="color:#00e5ff"><b>HOD</b> → ≤ RM 10,000</div>' +
-        '<div style="color:#3b82f6"><b>GEC-1 MGR</b> → ≤ RM 20,000</div>' +
-        '<div style="color:#69ff47"><b>MINE MGR/POWER/REGION</b> → ≤ RM 50,000</div>' +
-        '<div style="color:#ff9800"><b>GEC-1 SM</b> → ≤ RM 100,000</div>' +
-        '<div style="color:#ffd600"><b>GEC/HIA</b> → ≤ RM 500,000</div>' +
-        '<div style="color:#ff3d71"><b>GCEO</b> → ≤ RM 1,000,000</div>' +
-        '<div style="color:#546e8a;margin-top:8px;font-size:16px">READ the RM value. Use LOWEST authority that covers it.</div>';
+      const PTBL = '<h3 style="font-family:\'Orbitron\',sans-serif;font-size:14px;color:var(--gold);letter-spacing:3px;margin-bottom:10px">INDIVIDUAL LOA — QUOTATION &amp; TENDER</h3>' +
+        '<table style="width:100%;border-collapse:collapse;font-family:\'Inter\',sans-serif;font-size:13px">' +
+        '<thead><tr>' +
+        '<th style="text-align:center;padding:4px 6px;color:#546e8a;font-size:10px;letter-spacing:2px;border-bottom:1px solid #1a2d4a;width:32px">KEY</th>' +
+        '<th style="text-align:left;padding:4px 8px;color:#546e8a;font-size:10px;letter-spacing:2px;border-bottom:1px solid #1a2d4a">AUTHORITY</th>' +
+        '<th style="text-align:right;padding:4px 8px;color:#546e8a;font-size:10px;letter-spacing:2px;border-bottom:1px solid #1a2d4a">MAX LIMIT</th>' +
+        '</tr></thead><tbody>' +
+        '<tr><td style="text-align:center;color:#3a5a7a;padding:5px 6px;border-bottom:1px solid #0d1828">1</td><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#00e5ff"><b>HOD</b> &nbsp;<span style="font-size:11px;color:#4a7a9a">Head of District / Divisional Engineer</span></td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 10,000</td></tr>' +
+        '<tr><td style="text-align:center;color:#3a5a7a;padding:5px 6px;border-bottom:1px solid #0d1828">2</td><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#3b82f6"><b>GEC-1 MGR</b> &nbsp;<span style="font-size:11px;color:#3a5a7a">Managers reporting directly to GEC Members / HIA</span></td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 20,000</td></tr>' +
+        '<tr><td style="text-align:center;color:#3a5a7a;padding:5px 6px;border-bottom:1px solid #0d1828">3</td><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#69ff47"><b>MINE/PWR/REGION</b> &nbsp;<span style="font-size:11px;color:#3a5a7a">Mine Mgr / Head of Major Power Station / Head of Region</span></td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 50,000</td></tr>' +
+        '<tr><td style="text-align:center;color:#3a5a7a;padding:5px 6px;border-bottom:1px solid #0d1828">4</td><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#ff9800"><b>GEC-1 SM</b> &nbsp;<span style="font-size:11px;color:#3a5a7a">Senior Managers &amp; above reporting to GEC Members / HIA</span></td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 100,000</td></tr>' +
+        '<tr><td style="text-align:center;color:#3a5a7a;padding:5px 6px;border-bottom:1px solid #0d1828">5</td><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600"><b>GEC / HIA</b> &nbsp;<span style="font-size:11px;color:#3a5a7a">GEC Members / Head of Internal Audit</span></td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 500,000</td></tr>' +
+        '<tr><td style="text-align:center;color:#3a5a7a;padding:5px 6px">6</td><td style="padding:5px 8px;color:#ff3d71"><b>GCEO</b> &nbsp;<span style="font-size:11px;color:#3a5a7a">Group Chief Executive Officer</span></td><td style="text-align:right;padding:5px 8px;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 1,000,000</td></tr>' +
+        '</tbody></table>' +
+        '<div style="color:#546e8a;margin-top:10px;font-family:\'Inter\',sans-serif;font-size:12px;border-top:1px solid #1a2d4a;padding-top:8px">⚡ Always use the <b style="color:#ffd600">LOWEST</b> authority that covers the contract value.</div>';
       const GC = '#00e5ff';
 
       let lv = clamp((startLv || 1) - 1, 0, 4); let LC = LVLS[lv]; let currentLevelStartScore = startScore;
-      let S = { bx: W / 2 - BW / 2, auth: 0, items: [], parts: [], stars: makeStars(W, H), score: 0, lives: LC.lives, correct: 0, combo: 0, timer: 0, msg: '', msgT: 0, msgOk: true, msgWarn: false, over: false, sy: 0, totScore: currentLevelStartScore, tutDone: false, lastLifeMilestone: 0 };
+      let S = { bx: W / 2 - BW / 2, auth: 0, items: [], parts: [], stars: makeStars(W, H), score: 0, lives: LC.lives, correct: 0, combo: 0, timer: 0, msg: '', msgT: 0, msgOk: true, msgWarn: false, over: false, sy: 0, totScore: currentLevelStartScore, tutDone: false, lastLifeMilestone: 0, mistakes: [], lastMistake: '' };
 
       window.setA1 = function (i) {
         S.auth = i;
@@ -1891,7 +1987,9 @@
         }
 
         const p = pool(), t = p[Math.floor(Math.random() * p.length)];
-        let currentVy = LC.vy; if (lv === 4) currentVy += (S.correct * 0.02);
+        // Cap Endless escalation: max 1.35 px/frame so cards stay readable
+        let currentVy = LC.vy;
+        if (lv === 4) currentVy = Math.min(1.35, LC.vy + (S.correct * 0.008));
         S.items.push({ ...t, x: rnd(10, W - CW - 10), y: -CH - 5, vy: currentVy });
         setHint(t);
       }
@@ -1905,7 +2003,7 @@
         else {
           showLVC(total, S.correct, bonus, lesson, () => {
             lv++; LC = LVLS[lv]; currentLevelStartScore = total; const ns = S.totScore + S.score + bonus + perfectBonus;
-            S = { bx: W / 2 - BW / 2, auth: 0, items: [], parts: [], stars: S.stars, score: 0, lives: LC.lives, correct: 0, combo: 0, timer: 0, msg: '', msgT: 0, msgOk: true, msgWarn: false, over: false, sy: S.sy, totScore: ns, tutDone: true, lastLifeMilestone: 0 };
+            S = { bx: W / 2 - BW / 2, auth: 0, items: [], parts: [], stars: S.stars, score: 0, lives: LC.lives, correct: 0, combo: 0, timer: 0, msg: '', msgT: 0, msgOk: true, msgWarn: false, over: false, sy: S.sy, totScore: ns, tutDone: true, lastLifeMilestone: 0, mistakes: [], lastMistake: '' };
             buildUI(); buildMC1(LC.ma);
             setTimeout(() => { if ($$('g1cv')) $$('g1cv').focus(); }, 100);
             setLvlUI(lv + 1, LC.name, GC, 0, LC.goal); currentRAF = requestAnimationFrame(loop);
@@ -1932,24 +2030,31 @@
         }
       }
 
-      function loop() {
+      function loop(ts) {
         if (paused) return; const cv = $$('g1cv'); if (!cv) return; const ctx = cv.getContext('2d');
+        // Delta-time: normalize to 60fps so speed is framerate-independent
+        if (!loop.lastT) loop.lastT = ts;
+        const dt = Math.min((ts - loop.lastT) / 16.667, 2.5);
+        loop.lastT = ts;
 
         if (!S.tutDone) { drawTut(ctx); currentRAF = requestAnimationFrame(loop); return; }
 
         if (!S.over) {
-          if (keys['ArrowLeft'] || keys['KeyA']) S.bx = clamp(S.bx - 18, 0, W - BW);
-          if (keys['ArrowRight'] || keys['KeyD']) S.bx = clamp(S.bx + 18, 0, W - BW);
-          S.sy = (S.sy + 0.17) % H; S.timer++;
+          if (keys['ArrowLeft'] || keys['KeyA']) S.bx = clamp(S.bx - 18 * dt, 0, W - BW);
+          if (keys['ArrowRight'] || keys['KeyD']) S.bx = clamp(S.bx + 18 * dt, 0, W - BW);
+          S.sy = (S.sy + 0.17 * dt) % H; S.timer += dt;
 
-          let currentSpI = (lv === 4) ? Math.max(20, LC.spI - Math.floor(S.correct / 2)) : LC.spI;
+          // Endless: cap acceleration so the game never becomes unreadable (min spI=80, min vy=1.3)
+          let currentSpI = (lv === 4) ? Math.max(80, LC.spI - Math.floor(S.correct / 3)) : LC.spI;
           if (S.timer >= currentSpI) { spawn(); S.timer = 0; }
 
           if (lv === 4 && S.correct >= S.lastLifeMilestone + 20) { S.lastLifeMilestone += 20; if (S.lives < 5) { S.lives++; $$('g1lf').textContent = hearts(S.lives, LC.lives); playSound('lvl'); S.msg = '💚 EXTRA LIFE!'; S.msgT = 80; S.msgOk = true; S.msgWarn = false; } }
 
           const A = AUTHS[S.auth];
+          // Endless: cap fall speed so cards stay readable
+          const vyScale = (lv === 4) ? Math.min(1.3, LC.vy + S.correct * 0.005) : LC.vy;
           S.items = S.items.filter(it => {
-            it.y += it.vy; const bot = it.y + CH, bTop = H - 108, cx = it.x + CW / 2, bcx = S.bx + BW / 2;
+            it.y += it.vy * dt; const bot = it.y + CH, bTop = H - 108, cx = it.x + CW / 2, bcx = S.bx + BW / 2;
             if (bot >= bTop && bot <= bTop + 40 && Math.abs(cx - bcx) < BW / 2 + CW / 3) {
               if (it.auth === 99) {
                 playSound('lvl');
@@ -1961,20 +2066,31 @@
 
               if (it.auth === -1) {
                 playSound('miss'); S.combo = 0; S.lives--;
-                S.msg = '✗ CAUGHT A VIOLATION! (' + it.label + ')'; S.msgT = 130; S.msgOk = false; S.msgWarn = true; burst(S.parts, cx, bTop, '#ff3d71', 15);
-                if (S.lives <= 0) { S.over = true; setTimeout(() => showGO(S.totScore + S.score, () => { $$('gov').style.display = 'none'; game1(1, 0); }, '#00e5ff', lv + 1, () => { $$('gov').style.display = 'none'; game1(lv + 1, currentLevelStartScore); }), 380); }
+                S.msg = '✗ CAUGHT A VIOLATION! (' + it.label + ')'; S.msgT = 250; S.msgOk = false; S.msgWarn = true;
+                S.lastMistake = '⚠ VIOLATION: ' + it.label + ' — dodge these!';
+                S.mistakes.push({ label: it.label, desc: it.desc, chosen: 'VIOLATION CAUGHT', correct: 'DODGE — let it fall' });
+                burst(S.parts, cx, bTop, '#ff3d71', 15);
+                if (S.lives <= 0) { S.over = true; setTimeout(() => { lastRunMistakes = S.mistakes.slice(); showGO(S.totScore + S.score, () => { $$('gov').style.display = 'none'; game1(1, 0); }, '#00e5ff', lv + 1, () => { $$('gov').style.display = 'none'; game1(lv + 1, currentLevelStartScore); }); }, 380); }
               } else if (it.auth === S.auth) {
                 playSound('catch'); S.combo++; S.correct++; const pts = 100 + S.combo * 35 + (lv * 25); S.score += pts;
-                S.msg = S.combo > 2 ? S.combo + '× COMBO! +' + pts : '✓ ' + A.short + ' — +' + pts; S.msgT = 72; S.msgOk = true; S.msgWarn = false; burst(S.parts, cx, bTop, A.col, 14);
+                S.msg = S.combo > 2 ? S.combo + '× COMBO! +' + pts : '✓ ' + A.short + ' — +' + pts; S.msgT = 72; S.msgOk = true; S.msgWarn = false;
+                if (S.lastMistake) S.lastMistake = ''; // clear strip on correct catch
+                burst(S.parts, cx, bTop, A.col, 14);
                 setLvlUI(lv + 1, LC.name, GC, S.correct, LC.goal); if (S.correct >= LC.goal && lv !== 4) { S.over = true; setTimeout(doAdvance, 380); }
               } else if (S.auth > it.auth && it.v <= AUTHS[S.auth].max) {
                 playSound('miss'); S.combo = 0; S.lives--;
-                S.msg = '⚠️ TOO HIGH! Use lowest authority (' + AUTHS[it.auth].short + ')'; S.msgT = 130; S.msgOk = false; S.msgWarn = true; burst(S.parts, cx, bTop, '#ffd600', 10);
-                if (S.lives <= 0) { S.over = true; setTimeout(() => showGO(S.totScore + S.score, () => { $$('gov').style.display = 'none'; game1(1, 0); }, '#00e5ff', lv + 1, () => { $$('gov').style.display = 'none'; game1(lv + 1, currentLevelStartScore); }), 380); }
+                S.msg = '⚠️ TOO HIGH! Use lowest authority (' + AUTHS[it.auth].short + ')'; S.msgT = 250; S.msgOk = false; S.msgWarn = true;
+                S.lastMistake = 'Use LOWEST authority: ' + it.label + ' → ' + AUTHS[it.auth].short + ' (≤' + fmt(AUTHS[it.auth].max) + ')';
+                S.mistakes.push({ label: it.label, desc: it.desc, chosen: AUTHS[S.auth].short, correct: AUTHS[it.auth].short + ' (≤' + fmt(AUTHS[it.auth].max) + ')' });
+                burst(S.parts, cx, bTop, '#ffd600', 10);
+                if (S.lives <= 0) { S.over = true; setTimeout(() => { lastRunMistakes = S.mistakes.slice(); showGO(S.totScore + S.score, () => { $$('gov').style.display = 'none'; game1(1, 0); }, '#00e5ff', lv + 1, () => { $$('gov').style.display = 'none'; game1(lv + 1, currentLevelStartScore); }); }, 380); }
               } else {
                 playSound('miss'); S.combo = 0; S.lives--;
-                S.msg = '✗ ' + it.label + ' needs ' + AUTHS[it.auth].short + ' (≤' + fmt(AUTHS[it.auth].max) + ')'; S.msgT = 115; S.msgOk = false; S.msgWarn = false; burst(S.parts, cx, bTop, '#ff3d71', 10);
-                if (S.lives <= 0) { S.over = true; setTimeout(() => showGO(S.totScore + S.score, () => { $$('gov').style.display = 'none'; game1(1, 0); }, '#00e5ff', lv + 1, () => { $$('gov').style.display = 'none'; game1(lv + 1, currentLevelStartScore); }), 380); }
+                S.msg = '✗ ' + it.label + ' needs ' + AUTHS[it.auth].short + ' (≤' + fmt(AUTHS[it.auth].max) + ')'; S.msgT = 250; S.msgOk = false; S.msgWarn = false;
+                S.lastMistake = it.label + ' → correct: ' + AUTHS[it.auth].short + ' (≤' + fmt(AUTHS[it.auth].max) + ')';
+                S.mistakes.push({ label: it.label, desc: it.desc, chosen: AUTHS[S.auth].short, correct: AUTHS[it.auth].short + ' (≤' + fmt(AUTHS[it.auth].max) + ')' });
+                burst(S.parts, cx, bTop, '#ff3d71', 10);
+                if (S.lives <= 0) { S.over = true; setTimeout(() => { lastRunMistakes = S.mistakes.slice(); showGO(S.totScore + S.score, () => { $$('gov').style.display = 'none'; game1(1, 0); }, '#00e5ff', lv + 1, () => { $$('gov').style.display = 'none'; game1(lv + 1, currentLevelStartScore); }); }, 380); }
               }
               return false;
             }
@@ -1982,8 +2098,10 @@
               if (it.auth === 99) { return false; }
               if (it.auth === -1) { playSound('catch'); const pts = 150 + (lv * 20); S.score += pts; S.msg = '✓ DODGED VIOLATION! +' + pts; S.msgT = 70; S.msgOk = true; S.msgWarn = false; return false; }
               playSound('miss'); S.combo = 0; S.lives--;
-              S.msg = '☓ Escaped! ' + it.label + ' → ' + AUTHS[it.auth].short; S.msgT = 80; S.msgOk = false; S.msgWarn = false;
-              if (S.lives <= 0) { S.over = true; setTimeout(() => showGO(S.totScore + S.score, () => { $$('gov').style.display = 'none'; game1(1, 0); }, '#00e5ff', lv + 1, () => { $$('gov').style.display = 'none'; game1(lv + 1, currentLevelStartScore); }), 380); }
+              S.msg = '☣ Escaped! ' + it.label + ' → ' + AUTHS[it.auth].short; S.msgT = 180; S.msgOk = false; S.msgWarn = false;
+              S.lastMistake = it.label + ' escaped — needs: ' + AUTHS[it.auth].short + ' (≤' + fmt(AUTHS[it.auth].max) + ')';
+              S.mistakes.push({ label: it.label, desc: it.desc, chosen: 'MISSED (escaped)', correct: AUTHS[it.auth].short + ' (≤' + fmt(AUTHS[it.auth].max) + ')' });
+              if (S.lives <= 0) { S.over = true; setTimeout(() => { lastRunMistakes = S.mistakes.slice(); showGO(S.totScore + S.score, () => { $$('gov').style.display = 'none'; game1(1, 0); }, '#00e5ff', lv + 1, () => { $$('gov').style.display = 'none'; game1(lv + 1, currentLevelStartScore); }); }, 380); }
               return false;
             }
             return true;
@@ -2008,10 +2126,18 @@
             ctx.font = "14px 'Share Tech Mono',monospace"; ctx.fillStyle = '#ffffff'; ctx.fillText(it.label, it.x + CW / 2, it.y + CH / 2 + 15);
           }
           else if (isHazard) {
-            ctx.fillStyle = '#1a0505'; rr(ctx, it.x, it.y, CW, CH, 10); ctx.fill(); ctx.strokeStyle = '#ff3d71'; ctx.lineWidth = 2; ctx.shadowColor = '#ff3d71'; ctx.shadowBlur = 12;
+            ctx.fillStyle = '#1a0505'; rr(ctx, it.x, it.y, CW, CH, 10); ctx.fill(); ctx.strokeStyle = lv >= 2 ? '#ff3d7155' : '#ff3d71'; ctx.lineWidth = 2; ctx.shadowColor = '#ff3d71'; ctx.shadowBlur = lv >= 2 ? 4 : 12;
             rr(ctx, it.x, it.y, CW, CH, 10); ctx.stroke(); ctx.shadowBlur = 0; ctx.fillStyle = '#ff3d7128'; rr(ctx, it.x + 2, it.y + 2, CW - 4, 20, 7); ctx.fill();
-            ctx.font = "bold 18px 'Orbitron',monospace"; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillStyle = '#ffb0b0'; ctx.shadowColor = '#ff3d71'; ctx.shadowBlur = 6; ctx.fillText("AVOID!", it.x + CW / 2, it.y + 14); ctx.shadowBlur = 0;
-            ctx.font = "14px 'Share Tech Mono',monospace"; ctx.fillStyle = '#ff3d71'; ctx.fillText(it.label, it.x + CW / 2, it.y + CH / 2 + 4);
+            if (lv < 2) {
+              // L1 & L2: show explicit AVOID! header
+              ctx.font = "bold 18px 'Orbitron',monospace"; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillStyle = '#ffb0b0'; ctx.shadowColor = '#ff3d71'; ctx.shadowBlur = 6; ctx.fillText("AVOID!", it.x + CW / 2, it.y + 14); ctx.shadowBlur = 0;
+              ctx.font = "14px 'Share Tech Mono',monospace"; ctx.fillStyle = '#ff3d71'; ctx.fillText(it.label, it.x + CW / 2, it.y + CH / 2 + 4);
+            } else {
+              // L3+: disguised as a neutral card — players must read the description
+              ctx.font = "bold 14px 'Share Tech Mono',monospace"; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillStyle = '#c8c0b8'; ctx.fillText('CONTRACT', it.x + CW / 2, it.y + 14);
+              ctx.font = "bold 14px 'Share Tech Mono',monospace"; ctx.fillStyle = '#c0a8a0'; ctx.fillText(it.label, it.x + CW / 2, it.y + CH / 2 + 4);
+              ctx.font = "12px 'Share Tech Mono',monospace"; ctx.fillStyle = '#806060'; ctx.fillText('[Policy Issue]', it.x + CW / 2, it.y + CH - 12);
+            }
           } else {
             ctx.fillStyle = '#040e1a'; rr(ctx, it.x, it.y, CW, CH, 10); ctx.fill(); ctx.strokeStyle = '#2a6090'; ctx.lineWidth = 2; ctx.shadowColor = '#2a6090'; ctx.shadowBlur = 8;
             rr(ctx, it.x, it.y, CW, CH, 10); ctx.stroke(); ctx.shadowBlur = 0; ctx.fillStyle = '#1a4a6a28'; rr(ctx, it.x + 2, it.y + 2, CW - 4, 20, 7); ctx.fill();
@@ -2031,6 +2157,18 @@
         if (S.msgT > 0) {
           const al = Math.min(1, S.msgT / 16); const mc = S.msgWarn ? '#ffd600' : (S.msgOk ? '#00e676' : '#ff3d71');
           ctx.save(); ctx.globalAlpha = al; ctx.font = 'bold 20px Orbitron,monospace'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.shadowColor = mc; ctx.shadowBlur = 15; ctx.fillStyle = mc; ctx.fillText(S.msg, W / 2, 90); ctx.restore();
+        }
+
+        // Persistent "Last Mistake" strip — shown below feedback, until correct catch clears it
+        if (S.lastMistake && S.msgT <= 0) {
+          ctx.save();
+          ctx.fillStyle = 'rgba(10,6,0,0.80)';
+          rr(ctx, 40, 68, W - 80, 28, 8); ctx.fill();
+          ctx.strokeStyle = '#ffd60055'; ctx.lineWidth = 1;
+          rr(ctx, 40, 68, W - 80, 28, 8); ctx.stroke();
+          ctx.font = '13px Inter,Share Tech Mono,monospace'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+          ctx.fillStyle = '#ffd600aa'; ctx.fillText('📌 ' + S.lastMistake, W / 2, 82);
+          ctx.restore();
         }
         currentRAF = requestAnimationFrame(loop);
       }
@@ -2059,7 +2197,7 @@
     // GAME 2 — PROCUREMENT BLASTER
     // ══════════════════════════════════════════════════════════
     function game2(startLv, startScore = 0) {
-      const W = 1024, H = 600, EW = 170, EH = 100;
+      const W = 1024, H = 600, EW = 170, EH = 116;
 
       const CMTS = [
         { id: 0, short: 'RTC', maxT: 200000, maxDN: 0, col: '#00bcd4', bg: '#01181e' },
@@ -2071,35 +2209,35 @@
       ];
 
       const ALL_POOL = [
-        { v: 90000, mode: 'T', label: 'RM 90K', type: 'Pest Control', cmt: 0 },
-        { v: 120000, mode: 'T', label: 'RM 120K', type: 'Grass Cutting', cmt: 0 },
-        { v: 190000, mode: 'T', label: 'RM 190K', type: 'Office Renovation', cmt: 0 },
-        { v: 300000, mode: 'T', label: 'RM 300K', type: 'Civil Works', cmt: 1 },
-        { v: 850000, mode: 'T', label: 'RM 850K', type: 'Vehicle Lease', cmt: 1 },
-        { v: 1400000, mode: 'T', label: 'RM 1.4M', type: 'IT Hardware', cmt: 1 },
-        { v: 80000, mode: 'DN', label: 'RM 80K', type: 'OEM Spares (DN)', cmt: 1 },
-        { v: 180000, mode: 'DN', label: 'RM 180K', type: 'Software Lic (DN)', cmt: 1 },
-        { v: 2200000, mode: 'T', label: 'RM 2.2M', type: 'Heavy Equipment', cmt: 2 },
-        { v: 3500000, mode: 'T', label: 'RM 3.5M', type: 'HQ Maintenance', cmt: 2 },
-        { v: 4800000, mode: 'T', label: 'RM 4.8M', type: 'Server Upgrade', cmt: 2 },
-        { v: 500000, mode: 'DN', label: 'RM 500K', type: 'Proprietary System', cmt: 2 },
-        { v: 1200000, mode: 'DN', label: 'RM 1.2M', type: 'Strategic Partner', cmt: 2 },
-        { v: 6500000, mode: 'T', label: 'RM 6.5M', type: 'Transmission Line', cmt: 3 },
-        { v: 8500000, mode: 'T', label: 'RM 8.5M', type: 'Substation Civil', cmt: 3 },
-        { v: 9800000, mode: 'T', label: 'RM 9.8M', type: 'Transformer', cmt: 3 },
-        { v: 2800000, mode: 'DN', label: 'RM 2.8M', type: 'Sole Vendor Eqpt', cmt: 3 },
-        { v: 3000000, mode: 'DN', label: 'RM 3M', type: 'Strategic Partner', cmt: 3 },
-        { v: 4500000, mode: 'DN', label: 'RM 4.5M', type: 'Critical Spares', cmt: 3 },
-        { v: 15000000, mode: 'T', label: 'RM 15M', type: 'Hydro Dam Works', cmt: 4 },
-        { v: 35000000, mode: 'T', label: 'RM 35M', type: 'Grid Infrastructure', cmt: 4 },
-        { v: 48000000, mode: 'T', label: 'RM 48M', type: 'Grid Infrastructure', cmt: 4 },
-        { v: 12000000, mode: 'DN', label: 'RM 12M', type: 'Patented Tech', cmt: 4 },
-        { v: 42000000, mode: 'DN', label: 'RM 42M', type: 'Urgent Grid Fix', cmt: 4 },
-        { v: 65000000, mode: 'T', label: 'RM 65M', type: 'New Hydro Plant', cmt: 5 },
-        { v: 85000000, mode: 'T', label: 'RM 85M', type: 'State Grid Link', cmt: 5 },
-        { v: 120000000, mode: 'T', label: 'RM 120M', type: 'Mega Substation', cmt: 5 },
-        { v: 60000000, mode: 'DN', label: 'RM 60M', type: 'National Security', cmt: 5 },
-        { v: 80000000, mode: 'DN', label: 'RM 80M', type: 'Sole Global Supp.', cmt: 5 },
+        { v: 90000, mode: 'T', label: 'RM 90K', type: 'Pest Control', cmt: 0, scenario: 'Annual pest control for 3 district offices' },
+        { v: 120000, mode: 'T', label: 'RM 120K', type: 'Grass Cutting', cmt: 0, scenario: 'Monthly grass cutting along transmission corridors' },
+        { v: 190000, mode: 'T', label: 'RM 190K', type: 'Office Renovation', cmt: 0, scenario: 'Refurbishment of regional HQ meeting rooms' },
+        { v: 300000, mode: 'T', label: 'RM 300K', type: 'Civil Works', cmt: 1, scenario: 'Road access repair to remote substation site' },
+        { v: 850000, mode: 'T', label: 'RM 850K', type: 'Vehicle Lease', cmt: 1, scenario: 'Fleet lease for field maintenance crews (3 years)' },
+        { v: 1400000, mode: 'T', label: 'RM 1.4M', type: 'IT Hardware', cmt: 1, scenario: 'Network switch and server room upgrade' },
+        { v: 80000, mode: 'DN', label: 'RM 80K', type: 'OEM Spares (DN)', cmt: 1, scenario: 'Sole-source OEM turbine filter replacement' },
+        { v: 180000, mode: 'DN', label: 'RM 180K', type: 'Software Lic (DN)', cmt: 1, scenario: 'SCADA software annual licence renewal, original vendor only' },
+        { v: 2200000, mode: 'T', label: 'RM 2.2M', type: 'Heavy Equipment', cmt: 2, scenario: 'Excavators and crane hire for dam maintenance' },
+        { v: 3500000, mode: 'T', label: 'RM 3.5M', type: 'HQ Maintenance', cmt: 2, scenario: '5-year facilities management contract for group HQ' },
+        { v: 4800000, mode: 'T', label: 'RM 4.8M', type: 'Server Upgrade', cmt: 2, scenario: 'Full data centre refresh with new rack systems' },
+        { v: 500000, mode: 'DN', label: 'RM 500K', type: 'Proprietary System', cmt: 2, scenario: 'Energy management system config by original developer' },
+        { v: 1200000, mode: 'DN', label: 'RM 1.2M', type: 'Strategic Partner', cmt: 2, scenario: 'Strategic procurement with approved sole-source justification' },
+        { v: 6500000, mode: 'T', label: 'RM 6.5M', type: 'Transmission Line', cmt: 3, scenario: 'Rural 66kV transmission line stringing and testing' },
+        { v: 8500000, mode: 'T', label: 'RM 8.5M', type: 'Substation Civil', cmt: 3, scenario: 'New 132kV substation civil and structural works' },
+        { v: 9800000, mode: 'T', label: 'RM 9.8M', type: 'Transformer', cmt: 3, scenario: 'Supply and install of 132kV power transformers' },
+        { v: 2800000, mode: 'DN', label: 'RM 2.8M', type: 'Sole Vendor Eqpt', cmt: 3, scenario: 'Critical protection relay — one global manufacturer only' },
+        { v: 3000000, mode: 'DN', label: 'RM 3M', type: 'Strategic Partner', cmt: 3, scenario: 'Government-linked agency — services of strategic nature' },
+        { v: 4500000, mode: 'DN', label: 'RM 4.5M', type: 'Critical Spares', cmt: 3, scenario: 'Emergency spares for hydro plant, sole OEM source' },
+        { v: 15000000, mode: 'T', label: 'RM 15M', type: 'Hydro Dam Works', cmt: 4, scenario: 'Major civil rehabilitation of aging hydro dam structure' },
+        { v: 35000000, mode: 'T', label: 'RM 35M', type: 'Grid Infrastructure', cmt: 4, scenario: '500kV interconnect line spanning two regions' },
+        { v: 48000000, mode: 'T', label: 'RM 48M', type: 'Grid Infrastructure', cmt: 4, scenario: 'National grid reinforcement — new 275kV corridor' },
+        { v: 12000000, mode: 'DN', label: 'RM 12M', type: 'Patented Tech', cmt: 4, scenario: 'Proprietary advanced metering infrastructure rollout' },
+        { v: 42000000, mode: 'DN', label: 'RM 42M', type: 'Urgent Grid Fix', cmt: 4, scenario: 'Critical grid restoration — sole capable contractor available' },
+        { v: 65000000, mode: 'T', label: 'RM 65M', type: 'New Hydro Plant', cmt: 5, scenario: 'Full EPC contract for new 30MW mini-hydro plant' },
+        { v: 85000000, mode: 'T', label: 'RM 85M', type: 'State Grid Link', cmt: 5, scenario: 'Inter-state high-voltage interconnection project' },
+        { v: 120000000, mode: 'T', label: 'RM 120M', type: 'Mega Substation', cmt: 5, scenario: 'Greenfield 500kV main intake substation, turnkey' },
+        { v: 60000000, mode: 'DN', label: 'RM 60M', type: 'National Security', cmt: 5, scenario: 'Govt-directed strategic energy infrastructure, no open tender' },
+        { v: 80000000, mode: 'DN', label: 'RM 80M', type: 'Sole Global Supp.', cmt: 5, scenario: 'Advanced GIS switchgear — single global supplier certified' },
       ];
 
       const LVLS = [
@@ -2107,22 +2245,29 @@
         // spI=enemy spawn interval(frames), maxE=max enemies on screen
         // obs=obstacles on, baseHp=hits to kill enemy, shp=shield HP
         // obsCd=obstacle cooldown(frames between spawns) — independent timer
-        { mc: 1, dn: false, vy: 0.55, goal: 8, lives: 3, spI: 200, maxE: 2, obs: false, baseHp: 1, shp: 0, obsCd: 0, name: 'BASIC' },
-        { mc: 2, dn: false, vy: 0.70, goal: 10, lives: 4, spI: 170, maxE: 3, obs: false, baseHp: 1, shp: 0, obsCd: 0, name: 'STANDARD' },
-        { mc: 3, dn: true, vy: 0.85, goal: 12, lives: 4, spI: 140, maxE: 3, obs: true, baseHp: 2, shp: 2, obsCd: 420, name: 'ADVANCED' },
-        { mc: 5, dn: true, vy: 1.00, goal: 14, lives: 5, spI: 115, maxE: 4, obs: true, baseHp: 2, shp: 2, obsCd: 360, name: 'EXPERT' },
-        { mc: 5, dn: true, vy: 1.20, goal: Infinity, lives: 7, spI: 95, maxE: 5, obs: true, baseHp: 2, shp: 3, obsCd: 300, name: 'ENDLESS' },
+        { mc: 1, dn: false, vy: 0.30, goal: 8, lives: 3, spI: 250, maxE: 2, obs: false, baseHp: 1, shp: 0, obsCd: 0, name: 'BASIC' },
+        { mc: 2, dn: false, vy: 0.40, goal: 10, lives: 4, spI: 210, maxE: 3, obs: false, baseHp: 1, shp: 0, obsCd: 0, name: 'STANDARD' },
+        { mc: 3, dn: true, vy: 0.50, goal: 12, lives: 4, spI: 180, maxE: 3, obs: true, baseHp: 2, shp: 2, obsCd: 420, name: 'ADVANCED' },
+        { mc: 5, dn: true, vy: 0.60, goal: 14, lives: 5, spI: 150, maxE: 4, obs: true, baseHp: 2, shp: 2, obsCd: 360, name: 'EXPERT' },
+        { mc: 5, dn: true, vy: 0.70, goal: Infinity, lives: 7, spI: 120, maxE: 5, obs: true, baseHp: 2, shp: 3, obsCd: 300, name: 'ENDLESS' },
       ];
 
-      const PTBL = '<h3>TENDER COMMITTEE LOA</h3>' +
-        '<div style="color:#00bcd4"><b>RTC</b> — Tender ≤RM200K | DN: <b style="color:#ff3d71">None</b></div>' +
-        '<div style="color:#8bc34a"><b>GTC/RMTC</b> — Tender ≤RM1.5M | DN ≤RM200K</div>' +
-        '<div style="color:#ce93d8"><b>GSFMTC</b> — Tender ≤RM5M | DN ≤RM1.5M</div>' +
-        '<div style="color:#ffa000"><b>GOMTC</b> — Tender ≤RM10M | DN ≤RM5M</div>' +
-        '<div style="color:#ff5722"><b>GMTC</b> — Tender ≤RM50M | DN ≤RM50M</div>' +
-        '<div style="color:#f87171"><b>BOARD</b> — Tender & DN Exceeding RM50M</div>' +
-        '<div style="color:#f87171">[6] <b style="color:#f87171">BOARD</b> — Tender &amp; DN exceeding RM50M (No direct TC — goes to Board)</div>' +
-        '<div style="color:#546e8a;margin-top:8px;font-size:14px">T=Tender · DN=Direct Negotiation. Check BOTH value AND mode. RTC has NO DN authority.</div>';
+      const PTBL = '<h3 style="font-family:\'Orbitron\',sans-serif;font-size:14px;color:var(--gold);letter-spacing:3px;margin-bottom:10px">TENDER COMMITTEE LOA</h3>' +
+        '<table style="width:100%;border-collapse:collapse;font-family:\'Inter\',sans-serif;font-size:13px">' +
+        '<thead><tr>' +
+        '<th style="text-align:center;padding:4px 6px;color:#546e8a;font-size:10px;letter-spacing:2px;border-bottom:1px solid #1a2d4a;width:32px">KEY</th>' +
+        '<th style="text-align:left;padding:4px 8px;color:#546e8a;font-size:10px;letter-spacing:2px;border-bottom:1px solid #1a2d4a">AUTHORITY</th>' +
+        '<th style="text-align:right;padding:4px 8px;color:#546e8a;font-size:10px;letter-spacing:2px;border-bottom:1px solid #1a2d4a">TENDER LIMIT</th>' +
+        '<th style="text-align:right;padding:4px 8px;color:#546e8a;font-size:10px;letter-spacing:2px;border-bottom:1px solid #1a2d4a">DN LIMIT</th>' +
+        '</tr></thead><tbody>' +
+        '<tr><td style="text-align:center;color:#3a5a7a;padding:5px 6px;border-bottom:1px solid #0d1828">1</td><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#00bcd4"><b>RTC</b></td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 200K</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ff3d71;font-family:\'Orbitron\',monospace;font-size:12px">None</td></tr>' +
+        '<tr><td style="text-align:center;color:#3a5a7a;padding:5px 6px;border-bottom:1px solid #0d1828">2</td><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#8bc34a"><b>GTC/RMTC</b></td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 1.5M</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 200K</td></tr>' +
+        '<tr><td style="text-align:center;color:#3a5a7a;padding:5px 6px;border-bottom:1px solid #0d1828">3</td><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#ce93d8"><b>GSFMTC</b></td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 5M</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 1.5M</td></tr>' +
+        '<tr><td style="text-align:center;color:#3a5a7a;padding:5px 6px;border-bottom:1px solid #0d1828">4</td><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffa000"><b>GOMTC</b></td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 10M</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 5M</td></tr>' +
+        '<tr><td style="text-align:center;color:#3a5a7a;padding:5px 6px;border-bottom:1px solid #0d1828">5</td><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#ff5722"><b>GMTC</b></td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 50M</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 50M</td></tr>' +
+        '<tr><td style="text-align:center;color:#3a5a7a;padding:5px 6px">6</td><td style="padding:5px 8px;color:#f87171"><b>BOARD</b></td><td style="text-align:right;padding:5px 8px;color:#f87171;font-family:\'Orbitron\',monospace;font-size:12px">> RM 50M</td><td style="text-align:right;padding:5px 8px;color:#f87171;font-family:\'Orbitron\',monospace;font-size:12px">> RM 50M</td></tr>' +
+        '</tbody></table>' +
+        '<div style="color:#546e8a;margin-top:10px;font-family:\'Inter\',sans-serif;font-size:12px;border-top:1px solid #1a2d4a;padding-top:8px">⚡ T=Tender · DN=Direct Negotiation. Check <b style="color:#ffd600">BOTH</b> value AND mode.</div>';
       const GC = '#ff6d00';
 
       let lv = clamp((startLv || 1) - 1, 0, 4); let LC = LVLS[lv]; let currentLevelStartScore = startScore;
@@ -2197,7 +2342,8 @@
         const p = pool().filter(e => e.cmt === forceCmt); if (!p.length) return;
         const t = p[Math.floor(Math.random() * p.length)];
         const hp = LC.baseHp;
-        let endlessBoost = (lv === 4) ? (S.hits * 0.004) : 0;
+        // Cap Endless escalation: max 1.2 px/frame so cards stay readable at all stages
+        let endlessBoost = (lv === 4) ? Math.min(0.30, S.hits * 0.003) : 0;
         S.enemies.push({ ...t, x: ex, y: -EH, vy: (LC.vy + rnd(0, 0.05)) + endlessBoost, hp, shielded: (LC.obs && Math.random() < 0.40), shieldHp: LC.shp });
         setHint(t);
       }
@@ -2237,8 +2383,12 @@
         }
       }
 
-      function loop() {
+      function loop(ts) {
         if (paused) return; const cv = $$('g2cv'); if (!cv) return; const ctx = cv.getContext('2d');
+        // Delta-time: normalize to 60fps so speed is framerate-independent
+        if (!loop.lastT) loop.lastT = ts;
+        const dt = Math.min((ts - loop.lastT) / 16.667, 2.5);
+        loop.lastT = ts;
         if (!S.tutDone) { drawTut(ctx); currentRAF = requestAnimationFrame(loop); return; }
 
         if (!S.over) {
@@ -2308,7 +2458,7 @@
           }
 
           S.powerups = S.powerups.filter(p => {
-            p.y += p.vy;
+            p.y += p.vy * dt;
             if (Math.abs(p.x - S.sx) < 40 && p.y > H - 80 && p.y < H - 40) {
               playSound('lvl');
               if (p.type === 'LIFE') {
@@ -2329,7 +2479,7 @@
           });
 
           S.obstacles = S.obstacles.filter(ob => {
-            ob.y += ob.vy; let hitObs = false;
+            ob.y += ob.vy * dt; let hitObs = false;
             S.bullets = S.bullets.filter(b => { if (b.x > ob.x && b.x < ob.x + ob.w && b.y > ob.y && b.y < ob.y + ob.h) { hitObs = true; burst(S.parts, b.x, b.y, '#888', 5); return false; } return true; });
             if (S.sx > ob.x - 20 && S.sx < ob.x + ob.w + 20 && H - 80 > ob.y && H - 80 < ob.y + ob.h) {
               playSound('miss'); S.lives--; $$('g2lf').textContent = hearts(S.lives, LC.lives);
@@ -2341,7 +2491,7 @@
           });
 
           S.bullets = S.bullets.filter(b => {
-            b.y += b.vy; let hit = false;
+            b.y += b.vy * dt; let hit = false;
             S.enemies = S.enemies.filter(e => {
               if (hit) return true;
               if (Math.abs(b.x - e.x) < EW / 2 + 10 && Math.abs(b.y - e.y) < EH / 2 + 10) {
@@ -2362,7 +2512,7 @@
             return !hit && b.y > -20;
           });
           S.enemies = S.enemies.filter(e => {
-            e.y += e.vy;
+            e.y += e.vy * dt;
             if (e.y > H - 38) {
               playSound('miss'); S.lives--; $$('g2lf').textContent = hearts(S.lives, LC.lives);
               S.msg = '☓ Escaped! ' + e.label + '(' + e.mode + ') → ' + CMTS[e.cmt].short; S.msgT = 110; S.msgOk = false;
@@ -2483,9 +2633,20 @@
           ctx.strokeStyle = '#2a5a8a'; ctx.lineWidth = 2; ctx.shadowColor = '#2a5a8a'; ctx.shadowBlur = 10; rr(ctx, e.x - EW / 2, e.y - EH / 2, EW, EH, 10); ctx.stroke(); ctx.shadowBlur = 0;
           ctx.fillStyle = '#1a4a6a38'; rr(ctx, e.x - EW / 2 + 2, e.y - EH / 2 + 2, EW - 4, 26, 7); ctx.fill();
           const mc = (e.mode === 'T' ? '#5ab0e0' : '#e0a050');
-          ctx.font = 'bold 14px Orbitron,monospace'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillStyle = mc; ctx.shadowColor = mc; ctx.shadowBlur = 6; ctx.fillText(e.mode === 'T' ? 'TENDER' : 'DIRECT NEGO', e.x, e.y - EH / 2 + 15); ctx.shadowBlur = 0;
-          ctx.font = 'bold 20px Orbitron,monospace'; ctx.fillStyle = '#ffffff'; ctx.fillText(e.label, e.x, e.y + 2);
-          ctx.font = '14px Share Tech Mono,monospace'; ctx.fillStyle = '#7a9ab8'; ctx.fillText(e.type, e.x, e.y + EH / 2 - 19);
+          // Clip to card bounds so text never overflows the card
+          ctx.save(); ctx.beginPath(); rr(ctx, e.x - EW / 2 + 2, e.y - EH / 2 + 2, EW - 4, EH - 4, 8); ctx.clip();
+          ctx.font = 'bold 13px Orbitron,monospace'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle'; ctx.fillStyle = mc; ctx.shadowColor = mc; ctx.shadowBlur = 6; ctx.fillText(e.mode === 'T' ? 'TENDER' : 'DIRECT NEGO', e.x, e.y - EH / 2 + 16); ctx.shadowBlur = 0;
+          ctx.font = 'bold 17px Orbitron,monospace'; ctx.fillStyle = '#ffffff'; ctx.fillText(e.label, e.x, e.y - EH / 2 + 38);
+          ctx.font = '12px Share Tech Mono,monospace'; ctx.fillStyle = '#7a9ab8'; ctx.fillText(e.type, e.x, e.y - EH / 2 + 58);
+          if (e.scenario) {
+            ctx.font = '10px Inter,Share Tech Mono,monospace'; ctx.fillStyle = '#4a7a9a';
+            // Word-wrap scenario into 2 lines max
+            const words = e.scenario.split(' '); let line1 = '', line2 = '';
+            words.forEach(w => { if (ctx.measureText(line1 + w + ' ').width < EW - 14) line1 += w + ' '; else line2 += w + ' '; });
+            ctx.fillText(line1.trim(), e.x, e.y - EH / 2 + 78);
+            if (line2.trim()) ctx.fillText(line2.trim(), e.x, e.y - EH / 2 + 92);
+          }
+          ctx.restore();
           for (let i = 0; i < e.hp; i++) { ctx.fillStyle = '#ff3d71'; ctx.fillRect(e.x - (e.hp * 12) / 2 + i * 12, e.y + EH / 2 + 8, 10, 8); } ctx.restore();
         });
 
@@ -2586,21 +2747,28 @@
       //goal	Target amount to finish level
       //lives	Number of lives player gets
       const LVLS = [
-        { mz: 2, bvy: 2.00, pegR: 2, goal: 5, lives: 3, name: 'BASIC' },
-        { mz: 3, bvy: 2.00, pegR: 3, goal: 6, lives: 3, name: 'STANDARD' },
-        { mz: 4, bvy: 2.5, pegR: 3, goal: 7, lives: 4, name: 'ADVANCED' },
-        { mz: 5, bvy: 2.5, pegR: 4, goal: 8, lives: 5, name: 'EXPERT' },
-        { mz: 5, bvy: 2.8, pegR: 4, goal: Infinity, lives: 5, name: 'ENDLESS' },
+        { mz: 2, bvy: 1.5, pegR: 2, goal: 5, lives: 3, name: 'BASIC' },
+        { mz: 3, bvy: 1.5, pegR: 3, goal: 6, lives: 3, name: 'STANDARD' },
+        { mz: 4, bvy: 1.8, pegR: 3, goal: 7, lives: 4, name: 'ADVANCED' },
+        { mz: 5, bvy: 1.8, pegR: 4, goal: 8, lives: 5, name: 'EXPERT' },
+        { mz: 5, bvy: 2.1, pegR: 4, goal: Infinity, lives: 5, name: 'ENDLESS' },
       ];
 
-      const PTBL = '<h3>VARIATION ORDER APPROVAL HIERARCHY</h3>' +
-        '<div style="color:#22d3ee"><b>GEC / HIA</b> → Cap Works VO ≤RM100K within Contingency</div>' +
-        '<div style="color:#4ade80"><b>GTC/RMTC/RTC</b> → Accum VO ≤RM100K or ≤10% (whichever lower)</div>' +
-        '<div style="color:#c084fc"><b>GSFMTC</b> → Accum VO >100K or >10% up to RM500K</div>' +
-        '<div style="color:#fbbf24"><b>GOMTC</b> → Accum VO >100K or >10% up to RM1,000,000</div>' +
-        '<div style="color:#fb923c"><b>GMTC</b> → Accum VO > GSFMTC/GOMTC limit up to RM5M</div>' +
-        '<div style="color:#f87171"><b>BOARD</b> → Accum VO exceeds RM5,000,000</div>' +
-        '<div style="color:#546e8a;margin-top:8px;font-size:16px">Policy depends on who originally awarded the contract and the accumulative value!</div>';
+      const PTBL = '<h3 style="font-family:\'Orbitron\',sans-serif;font-size:14px;color:var(--gold);letter-spacing:3px;margin-bottom:10px">VARIATION ORDER APPROVAL HIERARCHY</h3>' +
+        '<table style="width:100%;border-collapse:collapse;font-family:\'Inter\',sans-serif;font-size:13px">' +
+        '<thead><tr>' +
+        '<th style="text-align:left;padding:4px 8px;color:#546e8a;font-size:10px;letter-spacing:2px;border-bottom:1px solid #1a2d4a;width:120px">AUTHORITY</th>' +
+        '<th style="text-align:left;padding:4px 8px;color:#546e8a;font-size:10px;letter-spacing:2px;border-bottom:1px solid #1a2d4a">DESCRIPTION</th>' +
+        '<th style="text-align:right;padding:4px 8px;color:#546e8a;font-size:10px;letter-spacing:2px;border-bottom:1px solid #1a2d4a;width:100px">ACCUM VO LIMIT</th>' +
+        '</tr></thead><tbody>' +
+        '<tr><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#22d3ee"><b>GEC / HIA</b></td><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#4a7a9a;font-size:11px">Cap Works VO within Contingency</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 100K</td></tr>' +
+        '<tr><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#4ade80"><b>GTC/RMTC/RTC</b></td><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#4a7a9a;font-size:11px">Whichever is lower (100K or 10%)</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ 100K / 10%</td></tr>' +
+        '<tr><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#c084fc"><b>GSFMTC</b></td><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#4a7a9a;font-size:11px">Accum VO >100K or >10%</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 500K</td></tr>' +
+        '<tr><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#fbbf24"><b>GOMTC</b></td><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#4a7a9a;font-size:11px">Accum VO >100K or >10%</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 1M</td></tr>' +
+        '<tr><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#fb923c"><b>GMTC</b></td><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#4a7a9a;font-size:11px">Accum VO > GSFMTC/GOMTC limit</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 5M</td></tr>' +
+        '<tr><td style="padding:5px 8px;color:#f87171"><b>BOARD</b></td><td style="padding:5px 8px;color:#4a7a9a;font-size:11px">Accum VO exceeds RM 5M</td><td style="text-align:right;padding:5px 8px;color:#f87171;font-family:\'Orbitron\',monospace;font-size:12px">> RM 5M</td></tr>' +
+        '</tbody></table>' +
+        '<div style="color:#546e8a;margin-top:10px;font-family:\'Inter\',sans-serif;font-size:12px;border-top:1px solid #1a2d4a;padding-top:8px">⚡ Policy depends on who originally awarded the contract and the accumulative value!</div>';
       const GC = '#d500f9'; const PW = 160, PH = 18, BR = 24; const ZONE_BAND_Y = 555; const ZONE_H = H - ZONE_BAND_Y; const PAD_Y = 526;
 
       let lv = clamp((startLv || 1) - 1, 0, 4); let LC = LVLS[lv]; let currentLevelStartScore = startScore;
@@ -2844,25 +3012,38 @@
         { l1: 'Office chair replace', l2: 'Furniture · RM 800', l3: 'Below RM 10K threshold', correct: 0 },
         { l1: 'Safety boots stock', l2: 'PPE Gear · RM 450', l3: 'Off-the-shelf goods', correct: 0 },
         { l1: 'Desk lamp', l2: 'Accessory · RM 250', l3: 'Standard item', correct: 0 },
+        { l1: 'Whiteboard markers', l2: 'Stationery · RM 60', l3: 'Small purchase limit', correct: 0 },
+        { l1: 'First aid kit refill', l2: 'Medical · RM 150', l3: 'Below RM 10K threshold', correct: 0 },
+        { l1: 'Pantry sugar & tea', l2: 'Consumable · RM 110', l3: 'Small purchase range', correct: 0 },
+        { l1: 'Small ladder', l2: 'Tools · RM 350', l3: 'Off-the-shelf item', correct: 0 },
 
         { l1: 'Air-cond servicing', l2: 'Annual service · RM 8,000', l3: '≤RM 10,000 — Small Purchase', correct: 0 },
-        { l1: 'Vehicle workshop', l2: 'Repair works · RM 22,000', l3: 'RM3K–RM500K range', correct: 1 },
+        { l1: 'Vehicle workshop', l2: 'Repair works · RM 22,000', l3: 'RM10K–RM500K range', correct: 1 },
         { l1: 'Security guard svc', l2: 'Depot · RM 180,000', l3: 'Quotation method', correct: 1 },
         { l1: 'Network cable upgrade', l2: 'IT works · RM 350,000', l3: 'Below RM500K limit', correct: 1 },
         { l1: 'Cleaning Service', l2: 'HQ block · RM 120,000', l3: 'Quotation required', correct: 1 },
         { l1: 'Building Repainting', l2: 'Exterior · RM 85,000', l3: 'Min 3 quotations', correct: 1 },
+        { l1: 'Pest Control', l2: 'Annual · RM 45,000', l3: 'Quotation threshold', correct: 1 },
+        { l1: 'Staff Training Event', l2: 'HR Course · RM 65,000', l3: 'Needs 3 quotations', correct: 1 },
+        { l1: 'CCTV Installation', l2: 'Security · RM 210,000', l3: 'RM10K–RM500K range', correct: 1 },
+        { l1: 'Landscaping Svc', l2: 'Compound · RM 95,000', l3: 'Quotation method', correct: 1 },
 
         { l1: 'New substation build', l2: 'Capital · RM 12,000,000', l3: 'Above RM500K — Tender', correct: 2 },
         { l1: 'Enterprise ERP system', l2: 'IT · RM 2,000,000', l3: 'Exceeds quota threshold', correct: 2 },
         { l1: 'Rural electrification', l2: 'Works · RM 4,500,000', l3: 'Competitive tender reqd', correct: 2 },
         { l1: 'Transformers batch', l2: 'Hardware · RM 800,000', l3: 'Above RM500K limit', correct: 2 },
         { l1: 'Fleet Vehicles', l2: 'Transport · RM 1,500,000', l3: 'Tender required', correct: 2 },
+        { l1: 'HQ Renovation', l2: 'Works · RM 6,000,000', l3: 'Above RM500K — Tender', correct: 2 },
+        { l1: 'Transmission Line', l2: 'Capital · RM 35,000,000', l3: 'Competitive tender reqd', correct: 2 },
+        { l1: 'Data Centre Cooling', l2: 'IT Infra · RM 1,200,000', l3: 'Exceeds quota limit', correct: 2 },
 
         { l1: 'OEM turbine parts', l2: 'Sole manufacturer only', l3: 'No alternative exists', correct: 3 },
         { l1: 'Proprietary SCADA fix', l2: 'Sole expert · justified', l3: 'DN — written justif.', correct: 3 },
         { l1: 'Legacy system licences', l2: 'OEM sole reseller', l3: 'Sole source required', correct: 3 },
         { l1: 'Software Renewal', l2: 'Original vendor only', l3: 'Direct Nego justified', correct: 3 },
         { l1: 'Bumiputera Manufacturer', l2: 'Single source status', l3: 'DN allowed by policy', correct: 3 },
+        { l1: 'Govt Linked Agency', l2: 'Strategic Partnership', l3: 'DN per MOF guidelines', correct: 3 },
+        { l1: 'Specialised Relays', l2: 'Only 1 global supplier', l3: 'No alternative exists', correct: 3 },
 
         { l1: 'Flood — transformer', l2: 'URGENT · restore power!', l3: 'Emergency procurement', correct: 4 },
         { l1: 'Storm damaged tower', l2: 'CRITICAL · safety risk!', l3: 'Unforeseen emergency', correct: 4 },
@@ -2876,26 +3057,36 @@
         { l1: 'Self Awarded', l2: 'Conflict of Interest', l3: 'POLICY VIOLATION!', correct: -1 },
         { l1: 'Missing 3 Quotes', l2: 'Only 1 quote obtained', l3: 'POLICY VIOLATION!', correct: -1 },
         { l1: 'Expired Contract', l2: 'Services continuing', l3: 'POLICY VIOLATION!', correct: -1 },
+        { l1: 'Unbudgeted Spend', l2: 'No funds allocated', l3: 'POLICY VIOLATION!', correct: -1 },
+        { l1: 'Favoured Vendor', l2: 'Bias in selection', l3: 'POLICY VIOLATION!', correct: -1 },
       ];
 
       const LVLS = [
-        { ml: 1, sp: 0.9, goal: 6, lives: 3, spI: 250, name: 'BASIC' },
-        { ml: 2, sp: 1.0, goal: 8, lives: 3, spI: 220, name: 'STANDARD' },
-        { ml: 3, sp: 1.2, goal: 10, lives: 4, spI: 180, name: 'ADVANCED' },
-        { ml: 4, sp: 1.35, goal: 12, lives: 5, spI: 150, name: 'EXPERT' },
-        { ml: 4, sp: 1.5, goal: Infinity, lives: 6, spI: 120, name: 'ENDLESS' },
+        // sp = base speed. Greatly reduced to ensure readability of 4-line cards.
+        { ml: 1, sp: 0.30, goal: 6, lives: 3, spI: 450, name: 'BASIC' },
+        { ml: 2, sp: 0.40, goal: 8, lives: 3, spI: 400, name: 'STANDARD' },
+        { ml: 3, sp: 0.50, goal: 10, lives: 4, spI: 350, name: 'ADVANCED' },
+        { ml: 4, sp: 0.60, goal: 12, lives: 5, spI: 300, name: 'EXPERT' },
+        { ml: 4, sp: 0.70, goal: Infinity, lives: 6, spI: 260, name: 'ENDLESS' },
       ];
-      const PTBL = '<h3>PROCUREMENT METHOD THRESHOLDS</h3>' +
-        '<div style="color:#67e8f9"><b>Small Purchase</b> — off-the-shelf goods/services up to <b style="color:#ffd600">RM 10,000</b></div>' +
-        '<div style="color:#86efac"><b>Quotation</b> — RM 10,001 up to <b style="color:#ffd600">RM 500,000</b>. Min 3 quotations required.</div>' +
-        '<div style="color:#c4b5fd"><b>Tender</b> — above <b style="color:#ffd600">RM 500,000</b>. Open competitive process.</div>' +
-        '<div style="color:#fde68a"><b>Direct Negotiation</b> — condition-based (sole vendor / OEM / Govt agency / strategic). Requires written justification.</div>' +
-        '<div style="color:#fca5a5"><b>Emergency Purchase</b> — urgent unforeseen only. GCEO ≤ RM3M. GCEO + Board Chairman > RM3M.</div>' +
-        '<div style="color:#546e8a;margin-top:8px;font-size:16px">Switch lanes BEFORE the card reaches the white JUDGMENT LINE!</div>';
-      const GC = '#00e676'; const CW = 190, CH = 96; const PX = 130;
+      const PTBL = '<h3 style="font-family:\'Orbitron\',sans-serif;font-size:14px;color:var(--gold);letter-spacing:3px;margin-bottom:10px">PROCUREMENT METHOD THRESHOLDS</h3>' +
+        '<table style="width:100%;border-collapse:collapse;font-family:\'Inter\',sans-serif;font-size:13px">' +
+        '<thead><tr>' +
+        '<th style="text-align:left;padding:4px 8px;color:#546e8a;font-size:10px;letter-spacing:2px;border-bottom:1px solid #1a2d4a;width:120px">METHOD</th>' +
+        '<th style="text-align:left;padding:4px 8px;color:#546e8a;font-size:10px;letter-spacing:2px;border-bottom:1px solid #1a2d4a">DESCRIPTION</th>' +
+        '<th style="text-align:right;padding:4px 8px;color:#546e8a;font-size:10px;letter-spacing:2px;border-bottom:1px solid #1a2d4a;width:100px">LIMIT</th>' +
+        '</tr></thead><tbody>' +
+        '<tr><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#67e8f9"><b>Small Purchase</b></td><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#4a7a9a;font-size:11px">Off-the-shelf goods and services</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 10K</td></tr>' +
+        '<tr><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#86efac"><b>Quotation</b></td><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#4a7a9a;font-size:11px">Minimum 3 quotations required</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">≤ RM 500K</td></tr>' +
+        '<tr><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#c4b5fd"><b>Tender</b></td><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#4a7a9a;font-size:11px">Open competitive process</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">> RM 500K</td></tr>' +
+        '<tr><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#fde68a"><b>Direct Nego</b></td><td style="padding:5px 8px;border-bottom:1px solid #0d1828;color:#4a7a9a;font-size:11px">Condition-based (sole vendor / OEM / Govt)</td><td style="text-align:right;padding:5px 8px;border-bottom:1px solid #0d1828;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">No Limit</td></tr>' +
+        '<tr><td style="padding:5px 8px;color:#fca5a5"><b>Emergency</b></td><td style="padding:5px 8px;color:#4a7a9a;font-size:11px">Urgent unforeseen (GCEO ≤3M / +Board >3M)</td><td style="text-align:right;padding:5px 8px;color:#ffd600;font-family:\'Orbitron\',monospace;font-size:12px">No Limit</td></tr>' +
+        '</tbody></table>' +
+        '<div style="color:#546e8a;margin-top:10px;font-family:\'Inter\',sans-serif;font-size:12px;border-top:1px solid #1a2d4a;padding-top:8px">⚡ Switch lanes BEFORE the card reaches the white JUDGMENT LINE!</div>';
+      const GC = '#00e676'; const CW = 190, CH = 96; const PX = 200;
 
       let lv = clamp((startLv || 1) - 1, 0, 4); let LC = LVLS[lv]; let currentLevelStartScore = startScore;
-      let S = { lane: 0, targetY: 0, py: 0, cards: [], parts: [], stars: makeStars(W, H), score: 0, lives: LC.lives, correct: 0, streak: 0, spawnT: 0, bgOff: 0, msg: '', msgT: 0, msgOk: true, over: false, totScore: currentLevelStartScore, tutDone: false, shake: 0, lastLifeMilestone: 0 };
+      let S = { lane: 0, targetY: 0, py: 0, cards: [], parts: [], stars: makeStars(W, H), score: 0, lives: LC.lives, correct: 0, streak: 0, spawnT: 0, bgOff: 0, msg: '', msgT: 0, msgOk: true, over: false, totScore: currentLevelStartScore, tutDone: false, shake: 0, lastLifeMilestone: 0, lastCard: null };
       S.targetY = laneY(0); S.py = laneY(0);
 
       function laneH() { return (H - 50) / (LC.ml + 1); } function laneY(i) { return 50 + i * laneH() + laneH() / 2; }
@@ -2972,26 +3163,46 @@
 
       const runT = () => Date.now() * 0.008;
 
-      function loop() {
+      function loop(ts) {
         if (paused) return; const cv = $$('g4cv'); if (!cv) return; const ctx = cv.getContext('2d');
+        // Delta-time: normalize to 60fps so speed is framerate-independent
+        if (!loop.lastT) loop.lastT = ts;
+        const dt = Math.min((ts - loop.lastT) / 16.667, 2.5);
+        loop.lastT = ts;
 
         if (!S.tutDone) { drawTut(ctx); currentRAF = requestAnimationFrame(loop); return; }
 
         if (!S.over) {
-          S.py += (S.targetY - S.py) * 0.2; S.bgOff = (S.bgOff + LC.sp) % 220; if (S.shake > 0) S.shake--; S.spawnT++;
-          let currentSpI = (lv === 4) ? Math.max(50, LC.spI - S.correct * 2) : LC.spI;
+          // Adjust ship movement speed using dt
+          S.py += (S.targetY - S.py) * 0.15 * dt; 
+          S.bgOff = (S.bgOff + LC.sp * dt) % 220; 
+          if (S.shake > 0) S.shake -= dt; 
+          S.spawnT += dt;
+          
+          let currentSpI = (lv === 4) ? Math.max(80, LC.spI - S.correct * 2) : LC.spI;
 
           if (S.spawnT >= currentSpI) {
-            const pool = cardPool(), t = pool[Math.floor(Math.random() * pool.length)], rLane = Math.floor(Math.random() * (LC.ml + 1));
-            S.cards.push({ ...t, x: W + 88, y: laneY(rLane), lane: rLane, judged: false }); S.spawnT = 0;
+            // Guard: Prevent overlap by ensuring no card is too close to the right edge (enforce at least 160px gap)
+            const tooClose = S.cards.some(c => c.x > W - 160);
+            if (!tooClose) {
+              const pool = cardPool();
+              let t;
+              // Prevent spawning the exact same card twice in a row
+              do { t = pool[Math.floor(Math.random() * pool.length)]; } while (pool.length > 1 && S.lastCard === t);
+              S.lastCard = t;
+              const rLane = Math.floor(Math.random() * (LC.ml + 1));
+              S.cards.push({ ...t, x: W + 88, y: laneY(rLane), lane: rLane, judged: false });
+            }
+            S.spawnT = 0;
           }
 
           if (lv === 4 && S.correct >= S.lastLifeMilestone + 20) { S.lastLifeMilestone += 20; if (S.lives < 5) { S.lives++; $$('g4lf').textContent = hearts(S.lives, LC.lives); playSound('lvl'); S.msg = '💚 EXTRA LIFE!'; S.msgT = 80; S.msgOk = true; S.msgWarn = false; } }
 
-          let currentSp = (lv === 4) ? LC.sp + (S.correct * 0.04) : LC.sp;
+          // Cap Endless escalation to max 1.1 px/frame so cards are always readable
+          let currentSp = (lv === 4) ? Math.min(1.1, LC.sp + (S.correct * 0.005)) : LC.sp;
 
           S.cards = S.cards.filter(card => {
-            card.x -= currentSp;
+            card.x -= currentSp * dt;
 
             if (!card.judged && card.x + CW / 2 <= PX) {
               card.judged = true;
@@ -3037,7 +3248,7 @@
             }
             return card.x > -CW - 20;
           });
-          S.parts = tickP(S.parts); if (S.msgT > 0) S.msgT--;
+          S.parts = tickP(S.parts); if (S.msgT > 0) S.msgT -= dt;
         }
         ctx.save(); if (S.shake > 0) ctx.translate(rnd(-S.shake * .45, S.shake * .45), rnd(-S.shake * .2, S.shake * .2));
         ctx.fillStyle = '#040c18'; ctx.fillRect(-10, -10, W + 20, H + 20);
