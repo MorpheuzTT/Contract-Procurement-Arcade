@@ -5,7 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
   <title>SE C&P Arcade - Final Master Build v14.0</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Inter:wght@400;600&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&family=Inter:wght@400;600&display=swap"
     rel="stylesheet" />
   <style>
     /* ==========================================================================
@@ -1090,7 +1091,9 @@
       z-index: 300;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+      overflow-y: auto;
+      padding: 20px 12px 30px;
     }
 
     .pov-t {
@@ -1113,21 +1116,31 @@
     .pov-tbl {
       background: #0b1120;
       border: 1px solid #1a3a5c;
-      border-radius: 12px;
-      padding: 16px 24px;
-      max-width: 700px;
-      width: 90%;
-      font-size: 14px;
+      border-radius: 14px;
+      padding: 24px 32px;
+      max-width: 900px;
+      width: 96%;
+      font-size: 17px;
       font-family: 'Inter', sans-serif;
-      line-height: 2.0;
+      line-height: 2.2;
     }
 
     .pov-tbl h3 {
       font-family: 'Orbitron', sans-serif;
-      font-size: 14px;
+      font-size: 18px;
       color: var(--gold);
       letter-spacing: 3px;
-      margin-bottom: 8px;
+      margin-bottom: 14px;
+    }
+
+    .pov-tbl table {
+      font-size: 16px;
+    }
+
+    .pov-tbl td,
+    .pov-tbl th {
+      padding: 7px 10px !important;
+      font-size: 15px !important;
     }
 
     .pov-res {
@@ -1274,64 +1287,8 @@
       <p>SARAWAK ENERGY · CONTRACT & PROCUREMENT · INTERACTIVE TRAINING</p>
     </div>
     <div class="tagline">4 GAMES · WEB/DESKTOP OPTIMIZED · PRESS P OR ESC TO PAUSE</div>
-    <div class="game-grid">
-      <div class="game-card" style="--ac:#00f5ff;border-color:#00f5ff30"
-        onmouseenter="this.style.borderColor='#00f5ff';this.style.boxShadow='0 0 36px #00f5ff22'"
-        onmouseleave="this.style.borderColor='#00f5ff30';this.style.boxShadow='none'" onclick="startGame(0)">
-        <div class="card-num" style="color:#00f5ff">GAME 01 / 04</div>
-        <div class="card-title" style="color:#00f5ff">CONTRACT CATCHER</div>
-        <div class="card-tag" style="background:#00f5ff18;color:#00f5ff;border:1px solid #00f5ff40">👤 Individual LOA
-        </div>
-        <div class="card-story" style="border-color:#00f5ff40">Set your basket to the exact lowest individual authority
-          before it hits the ground. Watch for Power-Ups!</div>
-        <div class="card-levels"><span>L1: ≤ RM 50K</span><span>L2: + Hazards</span><span>L3: ≤ RM 500K</span><span>L4:
-            All 6 Limits</span><span>L5: Endless</span></div>
-        <div class="card-ctrl"><b>← →</b> Move &nbsp;·&nbsp; <b>1–6</b> Authority &nbsp;·&nbsp; <b>P / ESC</b> Pause
-        </div>
-        <button class="play-btn" style="border-color:#00f5ff;color:#00f5ff">▶ PLAY</button>
-      </div>
-      <div class="game-card" style="--ac:#ff6d00;border-color:#ff6d0030"
-        onmouseenter="this.style.borderColor='#ff6d00';this.style.boxShadow='0 0 36px #ff6d0022'"
-        onmouseleave="this.style.borderColor='#ff6d0030';this.style.boxShadow='none'" onclick="startGame(1)">
-        <div class="card-num" style="color:#ff6d00">GAME 02 / 04</div>
-        <div class="card-title" style="color:#ff6d00">PROCUREMENT BLASTER</div>
-        <div class="card-tag" style="background:#ff6d0018;color:#ff6d00;border:1px solid #ff6d0040">🏛️ Tender
-          Committees</div>
-        <div class="card-story" style="border-color:#ff6d0040">Shoot the right TC based on Tender/DN mode and value.
-          Break shields and catch Orbs to survive!</div>
-        <div class="card-levels"><span>L1: 3-Hit TC</span><span>L2: + Shields</span><span>L3: Power-Ups</span><span>L4:
-            All 6 TCs</span><span>L5: Endless</span></div>
-        <div class="card-ctrl"><b>← →</b> Move &nbsp;·&nbsp; <b>1–6</b> Set TC &nbsp;·&nbsp; <b>SPACE</b> Fire</div>
-        <button class="play-btn" style="border-color:#ff6d00;color:#ff6d00">▶ PLAY</button>
-      </div>
-      <div class="game-card" style="--ac:#d500f9;border-color:#d500f930"
-        onmouseenter="this.style.borderColor='#d500f9';this.style.boxShadow='0 0 36px #d500f922'"
-        onmouseleave="this.style.borderColor='#d500f930';this.style.boxShadow='none'" onclick="startGame(2)">
-        <div class="card-num" style="color:#d500f9">GAME 03 / 04</div>
-        <div class="card-title" style="color:#d500f9">VO ESCALATOR</div>
-        <div class="card-tag" style="background:#d500f918;color:#d500f9;border:1px solid #d500f940">📈 Variation Orders
-        </div>
-        <div class="card-story" style="border-color:#d500f940">A VO arrived! Bounce the ball smoothly into the correct
-          accumulative approval zone column.</div>
-        <div class="card-levels"><span>L1: 3 zones</span><span>L2: 4 zones</span><span>L3: 5 zones</span><span>L4: All
-            6</span><span>L5: Endless</span></div>
-        <div class="card-ctrl"><b>← →</b> Move &nbsp;·&nbsp; <b>SPACE</b> Jump &nbsp;·&nbsp; <b>P / ESC</b> Pause</div>
-        <button class="play-btn" style="border-color:#d500f9;color:#d500f9">▶ PLAY</button>
-      </div>
-      <div class="game-card" style="--ac:#00e676;border-color:#00e67630"
-        onmouseenter="this.style.borderColor='#00e676';this.style.boxShadow='0 0 36px #00e67622'"
-        onmouseleave="this.style.borderColor='#00e67630';this.style.boxShadow='none'" onclick="startGame(3)">
-        <div class="card-num" style="color:#00e676">GAME 04 / 04</div>
-        <div class="card-title" style="color:#00e676">AUTHORITY RUSH</div>
-        <div class="card-tag" style="background:#00e67618;color:#00e676;border:1px solid #00e67640">📋 Procurement
-          Methods</div>
-        <div class="card-story" style="border-color:#00e67640">Switch your officer to the correct procurement method
-          lane. Watch out for "Self Awarded" hazards!</div>
-        <div class="card-levels"><span>L1: 2 Lanes</span><span>L2: + Hazards</span><span>L3: 4 Lanes</span><span>L4: All
-            5 Lanes</span><span>L5: Endless</span></div>
-        <div class="card-ctrl"><b>↑ ↓</b> Switch lane &nbsp;·&nbsp; <b>P / ESC</b> Pause</div>
-        <button class="play-btn" style="border-color:#00e676;color:#00e676">▶ PLAY</button>
-      </div>
+    <div class="game-grid" id="game-grid-inner">
+      <!-- Cards are rendered by JavaScript below. To lock/unlock a game, find GAME_LOCKS in the <script> section. -->
     </div>
 
     <div class="kb" style="font-size:13px">
@@ -1492,6 +1449,64 @@
 
   <script>
     'use strict';
+
+    // ══════════════════════════════════════════════════════════
+    // ★ GAME LOCK CONFIGURATION ★
+    // Set 'locked: true' to hide/disable a game, 'locked: false' to enable it.
+    // Change ONLY the 'locked' value — do not edit anything else here.
+    // ══════════════════════════════════════════════════════════
+    const GAME_LOCKS = [
+      { locked: false }, // Game 1: Contract Catcher
+      { locked: false }, // Game 2: Procurement Blaster
+      { locked: false }, // Game 3: VO Escalator
+      { locked: true }, // Game 4: Authority Rush
+    ];
+
+    // Game card data — no need to change this
+    const GAME_CARDS = [
+      { num: '01', title: 'CONTRACT CATCHER', tag: '👤 Individual LOA', col: '#00f5ff', ctrl: '← → Move &nbsp;·&nbsp; 1–6 Authority &nbsp;·&nbsp; P/ESC Pause', levels: 'L1: ≤ RM 50K | L2: + Hazards | L3: ≤ RM 500K | L4: All 6 Limits | L5: Endless', story: 'Set your basket to the exact lowest individual authority before it hits the ground. Watch for Power-Ups!', id: 0 },
+      { num: '02', title: 'PROCUREMENT BLASTER', tag: '🏛️ Tender Committees', col: '#ff6d00', ctrl: '← → Move &nbsp;·&nbsp; 1–6 Set TC &nbsp;·&nbsp; SPACE Fire &nbsp;·&nbsp; P/ESC Pause', levels: 'L1: 3-Hit TC | L2: + Shields | L3: Power-Ups | L4: All 6 TCs | L5: Endless', story: 'Shoot the right TC based on Tender/DN mode and value. Break shields and catch Orbs to survive!', id: 1 },
+      { num: '03', title: 'VO ESCALATOR', tag: '📈 Variation Orders', col: '#d500f9', ctrl: '← → Move &nbsp;·&nbsp; SPACE Jump &nbsp;·&nbsp; P/ESC Pause', levels: 'L1: 3 zones | L2: 4 zones | L3: 5 zones | L4: All 6 | L5: Endless', story: 'A VO arrived! Bounce the ball smoothly into the correct accumulative approval zone column.', id: 2 },
+      { num: '04', title: 'AUTHORITY RUSH', tag: '📋 Procurement Methods', col: '#00e676', ctrl: '↑ ↓ Switch Lane &nbsp;·&nbsp; SPACE Fast-Forward &nbsp;·&nbsp; P/ESC Pause', levels: 'L1: 2 Lanes | L2: + Hazards | L3: 4 Lanes | L4: All 5 Lanes | L5: Endless', story: 'Switch your officer to the correct procurement method lane. Watch out for Self Awarded hazards!', id: 3 },
+    ];
+
+    function buildGameGrid() {
+      const grid = document.getElementById('game-grid-inner');
+      if (!grid) return;
+      grid.innerHTML = GAME_CARDS.map((g, i) => {
+        const locked = GAME_LOCKS[i] && GAME_LOCKS[i].locked;
+        const c = g.col;
+        const lvSpans = g.levels.split('|').map(l => `<span>${l.trim()}</span>`).join('');
+        if (locked) {
+          return `<div class="game-card" style="--ac:#888;border-color:#33334430;opacity:0.45;cursor:not-allowed;position:relative;" title="This game is currently locked">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:10;border-radius:inherit;">
+              <div style="background:rgba(5,8,15,0.75);border:2px solid #444;border-radius:12px;padding:12px 28px;font-family:'Orbitron',sans-serif;font-size:22px;font-weight:900;color:#666;letter-spacing:4px;">🔒 LOCKED</div>
+            </div>
+            <div class="card-num" style="color:#555">GAME ${g.num} / 04</div>
+            <div class="card-title" style="color:#555">${g.title}</div>
+            <div class="card-tag" style="background:#33334418;color:#555;border:1px solid #33334440">${g.tag}</div>
+            <div class="card-story" style="border-color:#33334440">${g.story}</div>
+            <div class="card-levels">${lvSpans}</div>
+            <div class="card-ctrl">${g.ctrl}</div>
+            <button class="play-btn" style="border-color:#555;color:#555;cursor:not-allowed;">🔒 LOCKED</button>
+          </div>`;
+        } else {
+          return `<div class="game-card" style="--ac:${c};border-color:${c}30"
+            onmouseenter="this.style.borderColor='${c}';this.style.boxShadow='0 0 36px ${c}22'"
+            onmouseleave="this.style.borderColor='${c}30';this.style.boxShadow='none'"
+            onclick="startGame(${g.id})">
+            <div class="card-num" style="color:${c}">GAME ${g.num} / 04</div>
+            <div class="card-title" style="color:${c}">${g.title}</div>
+            <div class="card-tag" style="background:${c}18;color:${c};border:1px solid ${c}40">${g.tag}</div>
+            <div class="card-story" style="border-color:${c}40">${g.story}</div>
+            <div class="card-levels">${lvSpans}</div>
+            <div class="card-ctrl">${g.ctrl}</div>
+            <button class="play-btn" style="border-color:${c};color:${c}">▶ PLAY</button>
+          </div>`;
+        }
+      }).join('');
+    }
+
     const AudioContext = window.AudioContext || window.webkitAudioContext;
     let actx, isMuted = false;
 
@@ -1760,7 +1775,7 @@
       { tag: 'INDIVIDUAL LOA', col: '#00e5ff', title: 'GEC-1 Senior Manager: Up to RM 100,000', body: 'Senior Managers (SM) and above who directly report to GEC Members/Head of Internal Audit are authorised to approve Quotations and Tenders up to RM 100,000.' },
       { tag: 'INDIVIDUAL LOA', col: '#00e5ff', title: 'GEC Member / HIA: Up to RM 500,000', body: 'GEC Members and Head of Internal Audit are authorised to approve Quotations and Tenders up to RM 500,000.' },
       { tag: 'INDIVIDUAL LOA', col: '#00e5ff', title: 'GCEO: Up to RM 1,000,000', body: 'The Group Chief Executive Officer (GCEO) is individually authorised to approve Quotations and Tenders up to RM 1,000,000.' },
-
+      { tag: 'INDIVIDUAL LOA', col: '#00e5ff', title: 'Head of District: Up to RM 10,000', body: 'Head of District (District/Divisional Engineer and above) is authorised to approve Quotations and Tenders up to RM 10,000.' },
       // TENDER COMMITTEE LIMITS
       { tag: 'TENDER COMMITTEE', col: '#ff6d00', title: 'RTC: Tender ≤ RM 200,000', body: 'The Regional Tender Committee (RTC) handles Tenders up to RM 200,000.' },
       { tag: 'TENDER COMMITTEE', col: '#ff6d00', title: 'GTC / RMTC: Tender ≤ RM 1.5M, DN ≤ RM 200K', body: 'Generation Tender Committee (GTC) and Resource Management Tender Committee (RMTC) approve Tenders up to RM 1,500,000 and Direct Negotiations up to RM 200,000.' },
@@ -1817,13 +1832,13 @@
     }
 
     // ══════════════════════════════════════════════════════════
-    // GAME 1 — CONTRACT CATCHER
+    //GAME 1 — CONTRACT CATCHER
     // ══════════════════════════════════════════════════════════
     function game1(startLv, startScore = 0) {
       const W = 1024, H = 640, BW = 214, BH = 64; const CW = 164, CH = 96;
 
       const AUTHS = [
-        { id: 0, short: 'HOD', name: 'Head of District (District/Divisional Engineer and above)', max: 10000, col: '#00e5ff', bg: '#021620' },
+        { id: 0, short: 'HODistrict', name: 'Head of District (District/Divisional Engineer and above)', max: 10000, col: '#00e5ff', bg: '#021620' },
         { id: 1, short: 'GEC-1 MGR', name: 'GEC-1 (Managers who directly reports to GEC Members/Head of Internal Audit)', max: 20000, col: '#3b82f6', bg: '#06162a' },
         { id: 2, short: 'MINE/PWR/REG', name: 'Mine Managers/ Head of Major Power Stations/ Head of Regions', max: 50000, col: '#69ff47', bg: '#051a02' },
         { id: 3, short: 'GEC-1 SM', name: 'GEC-1 (SM and above who directly reports to GEC Members/Head of Internal Audit)', max: 100000, col: '#ff9800', bg: '#1a0e00' },
@@ -1950,7 +1965,7 @@
           '</div>' +
           '<canvas id="g1cv" tabindex="0" width="' + W + '" height="' + H + '" style="border-radius:14px;border:1px solid #1a2d4a;display:block;cursor:pointer;outline:none;"></canvas>';
 
-        $$('dc-hint').innerHTML = '<span><b style="color:#ffffff;background:#1a1400;padding:6px 12px;border-radius:6px;border:1px solid #ffd60040;font-family:\'Orbitron\',sans-serif;letter-spacing:1px;font-weight:900;">← →</b> Move Basket</span> <span><b style="color:#ffffff;background:#1a1400;padding:6px 12px;border-radius:6px;border:1px solid #ffd60040;font-family:\'Orbitron\',sans-serif;letter-spacing:1px;font-weight:900;">1 - 6</b> Set Limit</span> <span><b style="color:#ffffff;background:#1a1400;padding:6px 12px;border-radius:6px;border:1px solid #ffd60040;font-family:\'Orbitron\',sans-serif;letter-spacing:1px;font-weight:900;">P / ESC</b> Pause</span>';
+        $$('dc-hint').innerHTML = '<span><b style="color:#ffffff;background:#1a1400;padding:6px 12px;border-radius:6px;border:1px solid #ffd60040;font-family:\'Orbitron\',sans-serif;letter-spacing:1px;font-weight:900;">← →</b> Move Basket</span> <span><b style="color:#ffffff;background:#1a1400;padding:6px 12px;border-radius:6px;border:1px solid #ffd60040;font-family:\'Orbitron\',sans-serif;letter-spacing:1px;font-weight:900;">1 - 6</b> Set Limit</span> <span><b style="color:#ffffff;background:#00e67620;padding:6px 12px;border-radius:6px;border:1px solid #00e67660;font-family:\'Orbitron\',sans-serif;letter-spacing:1px;font-weight:900;color:#00e676;">SPACE</b> Turbo Drop</span> <span><b style="color:#ffffff;background:#1a1400;padding:6px 12px;border-radius:6px;border:1px solid #ffd60040;font-family:\'Orbitron\',sans-serif;letter-spacing:1px;font-weight:900;">P / ESC</b> Pause</span>';
       }
 
       buildUI();
@@ -2017,10 +2032,11 @@
         let steps = [
           '1. Contracts fall — use numbers 1 to 6 to set basket authority.',
           '2. Slide basket ← → to catch the contract.',
-          '3. Wrong authority or missed catch = lose a life!'
+          '3. Wrong authority or missed catch = lose a life!',
+          '4. ⚡ HOLD SPACE to speed up any card you have already read!'
         ];
-        if (lv >= 1) steps.push('4. ⚠️ DODGE RED HAZARD CARDS! Catching them costs a life.');
-        if (lv === 4) steps.push('5. 🔥 ENDLESS MODE: Survive as long as you can!');
+        if (lv >= 1) steps.push('5. ⚠️ DODGE RED HAZARD CARDS! Catching them costs a life.');
+        if (lv === 4) steps.push('6. 🔥 ENDLESS MODE: Survive as long as you can!');
 
         steps.forEach((s, i) => { ctx.font = '18px Share Tech Mono,monospace'; ctx.fillStyle = GC; ctx.fillText(s, W / 2, H / 2 - 30 + i * 40); });
 
@@ -2053,8 +2069,9 @@
           const A = AUTHS[S.auth];
           // Endless: cap fall speed so cards stay readable
           const vyScale = (lv === 4) ? Math.min(1.3, LC.vy + S.correct * 0.005) : LC.vy;
+          const turboMultiplier = (keys[' '] || keys['Space']) ? 3.0 : 1.0;
           S.items = S.items.filter(it => {
-            it.y += it.vy * dt; const bot = it.y + CH, bTop = H - 108, cx = it.x + CW / 2, bcx = S.bx + BW / 2;
+            it.y += it.vy * dt * turboMultiplier; const bot = it.y + CH, bTop = H - 108, cx = it.x + CW / 2, bcx = S.bx + BW / 2;
             if (bot >= bTop && bot <= bTop + 40 && Math.abs(cx - bcx) < BW / 2 + CW / 3) {
               if (it.auth === 99) {
                 playSound('lvl');
@@ -2065,7 +2082,7 @@
               }
 
               if (it.auth === -1) {
-                playSound('miss'); S.combo = 0; S.lives--;
+                playSound('catch'); S.combo = 0; S.lives--;
                 S.msg = '✗ CAUGHT A VIOLATION! (' + it.label + ')'; S.msgT = 250; S.msgOk = false; S.msgWarn = true;
                 S.lastMistake = '⚠ VIOLATION: ' + it.label + ' — dodge these!';
                 S.mistakes.push({ label: it.label, desc: it.desc, chosen: 'VIOLATION CAUGHT', correct: 'DODGE — let it fall' });
@@ -2248,8 +2265,8 @@
         { mc: 1, dn: false, vy: 0.30, goal: 8, lives: 3, spI: 250, maxE: 2, obs: false, baseHp: 1, shp: 0, obsCd: 0, name: 'BASIC' },
         { mc: 2, dn: false, vy: 0.40, goal: 10, lives: 4, spI: 210, maxE: 3, obs: false, baseHp: 1, shp: 0, obsCd: 0, name: 'STANDARD' },
         { mc: 3, dn: true, vy: 0.50, goal: 12, lives: 4, spI: 180, maxE: 3, obs: true, baseHp: 2, shp: 2, obsCd: 420, name: 'ADVANCED' },
-        { mc: 5, dn: true, vy: 0.60, goal: 14, lives: 5, spI: 150, maxE: 4, obs: true, baseHp: 2, shp: 2, obsCd: 360, name: 'EXPERT' },
-        { mc: 5, dn: true, vy: 0.70, goal: Infinity, lives: 7, spI: 120, maxE: 5, obs: true, baseHp: 2, shp: 3, obsCd: 300, name: 'ENDLESS' },
+        { mc: 5, dn: true, vy: 0.55, goal: 14, lives: 5, spI: 200, maxE: 3, obs: true, baseHp: 2, shp: 2, obsCd: 400, name: 'EXPERT' },
+        { mc: 5, dn: true, vy: 0.65, goal: Infinity, lives: 7, spI: 160, maxE: 4, obs: true, baseHp: 2, shp: 3, obsCd: 340, name: 'ENDLESS' },
       ];
 
       const PTBL = '<h3 style="font-family:\'Orbitron\',sans-serif;font-size:14px;color:var(--gold);letter-spacing:3px;margin-bottom:10px">TENDER COMMITTEE LOA</h3>' +
@@ -3063,11 +3080,11 @@
 
       const LVLS = [
         // sp = base speed. Greatly reduced to ensure readability of 4-line cards.
-        { ml: 1, sp: 0.30, goal: 6, lives: 3, spI: 450, name: 'BASIC' },
-        { ml: 2, sp: 0.40, goal: 8, lives: 3, spI: 400, name: 'STANDARD' },
-        { ml: 3, sp: 0.50, goal: 10, lives: 4, spI: 350, name: 'ADVANCED' },
-        { ml: 4, sp: 0.60, goal: 12, lives: 5, spI: 300, name: 'EXPERT' },
-        { ml: 4, sp: 0.70, goal: Infinity, lives: 6, spI: 260, name: 'ENDLESS' },
+        { ml: 1, sp: 0.3, goal: 4, lives: 3, spI: 450, name: 'BASIC' },
+        { ml: 2, sp: 0.40, goal: 6, lives: 3, spI: 400, name: 'STANDARD' },
+        { ml: 3, sp: 0.50, goal: 8, lives: 4, spI: 350, name: 'ADVANCED' },
+        { ml: 4, sp: 0.60, goal: 10, lives: 5, spI: 300, name: 'EXPERT' },
+        { ml: 4, sp: 0.70, goal: Infinity, lives: 7, spI: 260, name: 'ENDLESS' },
       ];
       const PTBL = '<h3 style="font-family:\'Orbitron\',sans-serif;font-size:14px;color:var(--gold);letter-spacing:3px;margin-bottom:10px">PROCUREMENT METHOD THRESHOLDS</h3>' +
         '<table style="width:100%;border-collapse:collapse;font-family:\'Inter\',sans-serif;font-size:13px">' +
@@ -3105,7 +3122,7 @@
           '</div>' +
           '<canvas id="g4cv" tabindex="0" width="' + W + '" height="' + H + '" style="border-radius:14px;border:1px solid #1a2d4a;display:block;cursor:pointer;outline:none;"></canvas>';
 
-        $$('dc-hint').innerHTML = '<span><b style="color:#ffffff;background:#1a1400;padding:6px 12px;border-radius:6px;border:1px solid #ffd60040;font-family:\'Orbitron\',sans-serif;letter-spacing:1px;font-weight:900;">↑ ↓</b> Switch Lane</span> <span><b style="color:#ffffff;background:#1a1400;padding:6px 12px;border-radius:6px;border:1px solid #ffd60040;font-family:\'Orbitron\',sans-serif;letter-spacing:1px;font-weight:900;">P / ESC</b> Pause</span>';
+        $$('dc-hint').innerHTML = '<span><b style="color:#ffffff;background:#1a1400;padding:6px 12px;border-radius:6px;border:1px solid #ffd60040;font-family:\'Orbitron\',sans-serif;letter-spacing:1px;font-weight:900;">↑ ↓</b> Switch Lane</span> <span><b style="color:#ffffff;background:#00e67620;padding:6px 12px;border-radius:6px;border:1px solid #00e67660;font-family:\'Orbitron\',sans-serif;letter-spacing:1px;font-weight:900;color:#00e676;">SPACE</b> Fast-Forward</span> <span><b style="color:#ffffff;background:#1a1400;padding:6px 12px;border-radius:6px;border:1px solid #ffd60040;font-family:\'Orbitron\',sans-serif;letter-spacing:1px;font-weight:900;">P / ESC</b> Pause</span>';
       }
 
       buildUI(); buildMC4(LC.ml); setPause(() => { if (!S.over) currentRAF = requestAnimationFrame(loop); }, PTBL); setLvlUI(lv + 1, LC.name, GC, S.correct, LC.goal);
@@ -3133,7 +3150,6 @@
         if (lv >= 4) { } else {
           showLVC(total, S.correct, bonus, lesson, () => {
             lv++; LC = LVLS[lv]; currentLevelStartScore = total; const ns = S.totScore + S.score + bonus + perfectBonus;
-            // [EDITED: Bypass tutorial on advance]
             S = { lane: 0, targetY: laneY(0), py: laneY(0), cards: [], parts: [], stars: S.stars, score: 0, lives: LC.lives, correct: 0, streak: 0, spawnT: 0, bgOff: 0, msg: '', msgT: 0, msgOk: true, over: false, totScore: ns, tutDone: true, shake: 0, lastLifeMilestone: 0 };
             buildUI(); buildMC4(LC.ml);
             setTimeout(() => { if ($$('g4cv')) $$('g4cv').focus(); }, 100);
@@ -3174,11 +3190,11 @@
 
         if (!S.over) {
           // Adjust ship movement speed using dt
-          S.py += (S.targetY - S.py) * 0.15 * dt; 
-          S.bgOff = (S.bgOff + LC.sp * dt) % 220; 
-          if (S.shake > 0) S.shake -= dt; 
+          S.py += (S.targetY - S.py) * 0.15 * dt;
+          S.bgOff = (S.bgOff + LC.sp * dt) % 220;
+          if (S.shake > 0) S.shake -= dt;
           S.spawnT += dt;
-          
+
           let currentSpI = (lv === 4) ? Math.max(80, LC.spI - S.correct * 2) : LC.spI;
 
           if (S.spawnT >= currentSpI) {
@@ -3199,10 +3215,11 @@
           if (lv === 4 && S.correct >= S.lastLifeMilestone + 20) { S.lastLifeMilestone += 20; if (S.lives < 5) { S.lives++; $$('g4lf').textContent = hearts(S.lives, LC.lives); playSound('lvl'); S.msg = '💚 EXTRA LIFE!'; S.msgT = 80; S.msgOk = true; S.msgWarn = false; } }
 
           // Cap Endless escalation to max 1.1 px/frame so cards are always readable
+          const turboMultiplier = (keys[' '] || keys['Space']) ? 2.5 : 1.0;
           let currentSp = (lv === 4) ? Math.min(1.1, LC.sp + (S.correct * 0.005)) : LC.sp;
 
           S.cards = S.cards.filter(card => {
-            card.x -= currentSp * dt;
+            card.x -= currentSp * dt * turboMultiplier;
 
             if (!card.judged && card.x + CW / 2 <= PX) {
               card.judged = true;
@@ -3342,6 +3359,10 @@
     function buildMC4(ml) {
       $$('mctrl').innerHTML = ''; $$('mctrl').style.display = 'none';
     }
+
+    // Initialise the launcher on page load
+    buildGameGrid();
+    renderPlayers();
   </script>
 </body>
 
